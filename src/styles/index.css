@@ -1,0 +1,222 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html * {
+  cursor: none !important;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.card-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 100vh;
+  background: whitesmoke;
+  padding: 50px 0;
+}
+
+.card-wrapper .card {
+  background: #1e242e;
+  color: #fff;
+  width: 450px;
+  height: 400px;
+  margin: 20px;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: perspective(1000px);
+          transform: perspective(1000px);
+  -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-animation: spin 0.75s ease-in;
+          animation: spin 0.75s ease-in;
+}
+
+.card-wrapper .card * {
+  -webkit-transform: translateZ(30px);
+          transform: translateZ(30px);
+}
+
+.card-wrapper .card .coverimg {
+  background-size: cover;
+  background-position: left center;
+  width: 100%;
+  height: 100px;
+  position: relative;
+}
+
+.card-wrapper .card .coverimg .card-image {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  top: 50px;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+  border-radius: 50%;
+  border: 5px solid #fff;
+}
+
+.card-wrapper .card .title {
+  margin-top: 70px;
+}
+
+.card-wrapper .card .contact {
+  background: -webkit-gradient(linear, left top, right top, from(#ee0979), to(#ff6a00));
+  background: linear-gradient(to right, #ee0979, #ff6a00);
+  padding: 10px 30px;
+  border: none;
+  color: #fff;
+  letter-spacing: 1px;
+  font-weight: 600;
+  margin-top: 20px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.card-wrapper .card .social {
+  list-style: none;
+  margin-top: 20px;
+}
+
+.card-wrapper .card .social .list-item {
+  display: inline-block;
+  border: 3px solid #ff6a00;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  margin: 5px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  -webkit-transition: 250ms ease-in-out;
+  transition: 250ms ease-in-out;
+}
+
+.card-wrapper .card .social .list-item .link {
+  text-decoration: none;
+  color: #fff;
+  font-size: 24px;
+  line-height: 50px;
+}
+
+.card-wrapper .card .social .facebook:hover {
+  outline: none;
+  border: 3px solid #ee0979;
+  -webkit-box-shadow: 0 0 50px 50px #ee0979 inset;
+          box-shadow: 0 0 50px 50px #ee0979 inset;
+}
+
+.card-wrapper .card .social .twitter:hover {
+  border: 3px solid #f53246;
+  -webkit-box-shadow: 0 0 50px 50px #f53246 inset;
+          box-shadow: 0 0 50px 50px #f53246 inset;
+}
+
+.card-wrapper .card .social .instagram:hover {
+  border: 3px solid #fa4b27;
+  -webkit-box-shadow: 0 0 50px 50px #fa4b27 inset;
+          box-shadow: 0 0 50px 50px #fa4b27 inset;
+}
+
+.card-wrapper .card .social .linkedin:hover {
+  outline: none;
+  -webkit-box-shadow: 0 0 50px 50px #ff6a00 inset;
+          box-shadow: 0 0 50px 50px #ff6a00 inset;
+}
+
+.card-wrapper .btmarrow {
+  margin-top: 80px;
+  width: 50px;
+  height: 50px;
+  font-size: 1.2em;
+  text-align: center;
+  line-height: 48px;
+  text-decoration: none;
+  color: #000;
+  border: 3px solid #000;
+  border-radius: 50%;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.card-wrapper .btmarrow:hover {
+  color: #fff;
+  -webkit-box-shadow: 0 0 50px 50px #000 inset, 0 0 10px #000;
+          box-shadow: 0 0 50px 50px #000 inset, 0 0 10px #000;
+}
+
+@-webkit-keyframes spin {
+  from {
+    -webkit-transform: rotateY(0.25turn);
+            transform: rotateY(0.25turn);
+    margin-bottom: 100px;
+    opacity: 0.7;
+  }
+  to {
+    -webkit-transform: rotateY(0);
+            transform: rotateY(0);
+    margin-bottom: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes spin {
+  from {
+    -webkit-transform: rotateY(0.25turn);
+            transform: rotateY(0.25turn);
+    margin-bottom: 100px;
+    opacity: 0.7;
+  }
+  to {
+    -webkit-transform: rotateY(0);
+            transform: rotateY(0);
+    margin-bottom: 0;
+    opacity: 1;
+  }
+}
+
+.cursor {
+  width: 3rem;
+  height: 3rem;
+  z-index: 9;
+  border: 2px solid black;
+  border-radius: 50%;
+  position: absolute;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  pointer-events: none;
+  background: white;
+  opacity: 0.4;
+}
+/*# sourceMappingURL=index.css.map */

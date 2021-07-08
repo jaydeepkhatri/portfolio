@@ -1,0 +1,16 @@
+$black: #000;
+$white: #fff;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+    * {
+        cursor: none !important;
+    }
+}
+body {
+    font-family: 'Roboto', sans-serif;
+}
