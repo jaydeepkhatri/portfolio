@@ -9,4 +9,16 @@
 	pointer-events: none;
 	background: white;
 	opacity: 0.4;
+	&::after {
+		content: '';
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 3px;
+		height: 3px;
+		background-color: #000;
+		border-radius: 50%;
+
+	}
 }
