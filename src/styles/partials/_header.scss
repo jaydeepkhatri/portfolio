@@ -1,0 +1,157 @@
+.header {
+    min-height: 100vh;
+    background: linear-gradient(to bottom right, #232526, #000000);
+    position: relative;
+    .nav-links {
+        text-align: center;
+        padding: 12px 0;
+        transition: 0.2s;
+        a {
+            display: inline-block;
+            padding: 10px 20px;
+            text-decoration: none;
+            color: $white;
+            border-radius: 20px;
+            transition: 0.25s;
+            &:hover {
+                color: $white;
+                background: $black;
+            }
+        }
+        .menubtn {
+            display: none;
+        }
+        &:hover {
+            background: #ff6a00;
+        }
+    }
+    .bigtext {
+        min-height: calc(100vh - 80px);
+        // display: flex;
+        // align-items: center;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        place-items: center;
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+        div {
+            margin-left: 200px;
+            h1 {
+                font-size: 10rem;
+                padding: 30px 0;
+                color: $white;
+                text-shadow: 
+                    -0.0075em 0.0075em 0 mix($white, #a8a8a8, 94%),
+                    0.005em 0.005em 0 mix($white, #a8a8a8, 60%),
+                    0.01em 0.01em 0 mix($white, #a8a8a8, 62%), 
+                    0.015em 0.015em mix($white, #a8a8a8, 64%), 
+                    0.02em 0.02em 0 mix($white, #a8a8a8, 66%), 
+                    0.025em 0.025em 0 mix($white, #a8a8a8, 68%),
+                    0.03em 0.03em 0 mix($white, #a8a8a8, 70%),
+                    0.035em 0.035em 0 mix($white, #a8a8a8, 72%);
+                transition: 125ms;
+                .name {
+                    font-weight: bold;
+                    color: #ff6a00;
+                    text-shadow: 
+                        -0.0075em 0.0075em 0 mix($white, #ff9100, 94%),
+                        0.005em 0.005em 0 mix($white, #ff9100, 60%),
+                        0.01em 0.01em 0 mix($white, #ff9100, 62%), 
+                        0.015em 0.015em mix($white, #ff9100, 64%), 
+                        0.02em 0.02em 0 mix(#f00, #ff9100, 66%), 
+                        0.025em 0.025em 0 mix(#f00, #ff9100, 68%),
+                        0.03em 0.03em 0 mix(#f00, #ff9100, 70%),
+                        0.035em 0.035em 0 mix(#f00, #ff9100, 72%);
+                    position: relative;
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        width: 100%;
+                        transform: scaleX(0);
+                        height: 5px;
+                        bottom: -10px;
+                        left: 0;
+                        background-color: mix(#ff9100, #f00);
+                        transform-origin: bottom right;
+                        transition: transform 0.25s ease-out;
+                    }
+                    &:hover::after {
+                        transform: scaleX(1);
+                        transform-origin: bottom left;
+                    }
+                }
+            }
+            .text {
+                color:#abc;
+                font-style: italic;
+                font-size: 20px;
+            }
+        }
+        .headerimg {
+            text-align: center;
+            width: auto;
+            max-width: 400px;
+        }
+    }
+    .circle {
+        position: absolute;
+        top: 30%;
+        left: -75px;
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        background: #ff6a0069;
+        .chota-circle {
+            top: 0px;
+            right: 0px;
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: #ff6a0069;
+        }
+        &:hover {
+            background: #ff6a00;
+        }
+    }
+}
+@media screen and (max-width: 1000px) {
+    .header {
+        .bigtext {
+            div {
+                margin-left: 150px;
+                h1 {
+                    font-size: 6rem;
+                }
+            }
+            
+        }
+    }
+}
+@media screen and (max-width: 800px) {
+    .header {
+        .bigtext {
+            grid-template-columns: 1fr;
+            div {
+                margin-left: 0;
+                h1 {
+                    text-align: center;
+                    font-size: 5rem;
+                }
+            }
+            .headerimg {
+                display: none;
+            }
+        }
+    }
+}
+@media screen and (max-width: 600px) {
+    .header {
+        .bigtext {
+            h1 {
+                font-size: 3rem;
+            }
+        }
+    }
+}

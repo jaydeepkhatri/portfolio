@@ -9,6 +9,7 @@
 	pointer-events: none;
 	background: white;
 	opacity: 0.4;
+	transition: 125ms;
 	&::after {
 		content: '';
 		position: absolute;

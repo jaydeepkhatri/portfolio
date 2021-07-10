@@ -7,7 +7,7 @@ const TiltCard = () => {
     return (
         <div className="card-wrapper">
             <Tilt className="card" options={{ scale: 1 }}>
-                <div className="coverimg" alt="Cover Photo" style={{
+                <div className="coverimg" style={{
                     backgroundImage: `url("${coverphoto}")`
                 }}>
                     <img src="./img/profile.jpg" alt="Jaydeep Khatri" className="card-image" />
@@ -29,7 +29,7 @@ const TiltCard = () => {
                     </li>
                 </ul>
             </Tilt>
-            <a href="#" className="btmarrow"><FontAwesomeIcon icon={faChevronDown} /> </a>
+            <a href="#header" className="btmarrow"><FontAwesomeIcon icon={faChevronDown} /> </a>
         </div>
     )
 }

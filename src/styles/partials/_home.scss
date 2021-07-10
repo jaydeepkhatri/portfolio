@@ -7,10 +7,8 @@ $white: #fff;
 }
 html {
     scroll-behavior: smooth;
-    * {
-        cursor: none !important;
-    }
 }
 body {
     font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
 }
