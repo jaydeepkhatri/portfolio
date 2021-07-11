@@ -2,7 +2,7 @@ import { faHome, faBook, faNetworkWired, faUser } from "@fortawesome/free-solid-
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import HeaderImg from './img/Typing-bro.svg';
+import HeaderImg from '../assets/img/Typing-bro.svg';
 
 const Header = () => {
     AOS.init();

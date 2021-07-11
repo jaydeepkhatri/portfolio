@@ -1,6 +1,6 @@
 import Tilt from 'react-tilt';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import coverphoto from './img/coverphoto.jpg';
+import coverphoto from '../assets/img/coverphoto.jpg';
 import { faFacebook, faInstagram, faTwitter, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
 const TiltCard = () => {
