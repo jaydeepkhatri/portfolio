@@ -7,11 +7,44 @@
 
 html {
   scroll-behavior: smooth;
+  -webkit-user-select: #ff9a00;
+     -moz-user-select: #ff9a00;
+      -ms-user-select: #ff9a00;
+          user-select: #ff9a00;
 }
 
 body {
   font-family: 'Roboto', sans-serif;
   overflow-x: hidden;
+}
+
+.title {
+  position: relative;
+}
+
+.title::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  height: 5px;
+  bottom: -5px;
+  left: 0;
+  background-color: #ff9100;
+  -webkit-transform-origin: bottom right;
+          transform-origin: bottom right;
+  -webkit-transition: -webkit-transform 0.25s ease-out;
+  transition: -webkit-transform 0.25s ease-out;
+  transition: transform 0.25s ease-out;
+  transition: transform 0.25s ease-out, -webkit-transform 0.25s ease-out;
+}
+
+.title:hover::after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+  -webkit-transform-origin: bottom left;
+          transform-origin: bottom left;
 }
 
 .card-wrapper {
@@ -338,32 +371,6 @@ body {
   font-weight: bold;
   color: #ff6a00;
   text-shadow: -0.0075em 0.0075em 0 #fff8f0, 0.005em 0.005em 0 #ffd399, 0.01em 0.01em 0 #ffd59e, 0.015em 0.015em #ffd7a3, 0.02em 0.02em 0 #ff3100, 0.025em 0.025em 0 #ff2e00, 0.03em 0.03em 0 #ff2c00, 0.035em 0.035em 0 #ff2900;
-  position: relative;
-}
-
-.header .bigtext div h1 .name::after {
-  content: '';
-  position: absolute;
-  width: 100%;
-  -webkit-transform: scaleX(0);
-          transform: scaleX(0);
-  height: 5px;
-  bottom: -10px;
-  left: 0;
-  background-color: #ff4900;
-  -webkit-transform-origin: bottom right;
-          transform-origin: bottom right;
-  -webkit-transition: -webkit-transform 0.25s ease-out;
-  transition: -webkit-transform 0.25s ease-out;
-  transition: transform 0.25s ease-out;
-  transition: transform 0.25s ease-out, -webkit-transform 0.25s ease-out;
-}
-
-.header .bigtext div h1 .name:hover::after {
-  -webkit-transform: scaleX(1);
-          transform: scaleX(1);
-  -webkit-transform-origin: bottom left;
-          transform-origin: bottom left;
 }
 
 .header .bigtext div .text {
@@ -396,6 +403,10 @@ body {
   height: 20px;
   border-radius: 50%;
   background: #ff6a0069;
+}
+
+.header .circle .chota-circle:hover {
+  background: #ff6a00;
 }
 
 .header .circle:hover {
@@ -431,6 +442,180 @@ body {
 @media screen and (max-width: 600px) {
   .header .bigtext h1 {
     font-size: 3rem;
+  }
+}
+
+.contact {
+  padding: 40px 0;
+  background: #f1f1f1;
+}
+
+.contact h2 {
+  text-align: center;
+}
+
+.contact .contactgrid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  grid-gap: 40px;
+  width: 60%;
+  margin: auto;
+}
+
+.contact .contactgrid .formarea {
+  margin-top: 20px;
+}
+
+.contact .contactgrid .formarea .form {
+  background: #fff;
+  padding: 40px;
+  border-radius: 20px;
+  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.contact .contactgrid .formarea .form .form-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.contact .contactgrid .formarea .form .form-group label {
+  color: #555;
+  font-size: 14px;
+}
+
+.contact .contactgrid .formarea .form .form-group .text {
+  font-family: 'Roboto', sans-serif;
+  padding: 8px 12px;
+  background: #424242;
+  border: none;
+  outline: none;
+  margin-top: 2px;
+  border-radius: 4px;
+  color: #fff;
+  caret-color: #ff9a00;
+}
+
+.contact .contactgrid .formarea .form .form-group .text:hover, .contact .contactgrid .formarea .form .form-group .text:focus, .contact .contactgrid .formarea .form .form-group .text:active {
+  -webkit-box-shadow: 0 0 5px #ff9a00;
+          box-shadow: 0 0 5px #ff9a00;
+}
+
+.contact .contactgrid .formarea .form .form-group .message {
+  padding: 8px 12px;
+  outline: none;
+  background: #424242;
+  border: 2px solid #424242;
+  color: #fff;
+  resize: none;
+  border-radius: 4px;
+  caret-color: #ff9a00;
+}
+
+.contact .contactgrid .formarea .form .form-group .message:hover, .contact .contactgrid .formarea .form .form-group .message:focus, .contact .contactgrid .formarea .form .form-group .message:active {
+  -webkit-box-shadow: 0 0 5px #ff9a00;
+          box-shadow: 0 0 5px #ff9a00;
+}
+
+.contact .contactgrid .formarea .form .submit {
+  padding: 8px 32px;
+  border: none;
+  background: #ff9a00;
+  letter-spacing: 1px;
+  font-size: 18px;
+  position: relative;
+  top: 0;
+  left: 0;
+  border-radius: 4px;
+  text-transform: uppercase;
+  -webkit-box-shadow: 0 6px #b46c00;
+          box-shadow: 0 6px #b46c00;
+  -webkit-transition: 0.12s;
+  transition: 0.12s;
+}
+
+.contact .contactgrid .formarea .form .submit:hover {
+  top: 3px;
+  left: 0;
+  -webkit-box-shadow: 0 3px #b46c00, 0 5px 10px #b46c00;
+          box-shadow: 0 3px #b46c00, 0 5px 10px #b46c00;
+}
+
+.contact .contactgrid .formarea .form .submit:active {
+  top: 6px;
+  -webkit-box-shadow: 0 0 #b46c00, 0 5px 10px #b46c00;
+          box-shadow: 0 0 #b46c00, 0 5px 10px #b46c00;
+}
+
+.contact .contactgrid .details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.contact .contactgrid .details a {
+  text-decoration: none;
+  color: #000;
+  display: block;
+  padding: 20px 20px;
+}
+
+.contact .contactgrid .details a svg {
+  color: #ff9a00;
+}
+
+.footer {
+  padding: 20px 0;
+  text-align: center;
+  background: #000;
+  color: #fff;
+  letter-spacing: 2px;
+  cursor: default;
+}
+
+.footer:hover svg {
+  color: #ff9a00;
+}
+
+.footer svg {
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+}
+
+@media screen and (max-width: 1000px) {
+  .contact .contactgrid {
+    width: 80%;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .contact .contactgrid {
+    width: 100%;
+  }
+  .contact .contactgrid .formarea .form {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    border-radius: 0;
   }
 }
 /*# sourceMappingURL=index.css.map */

@@ -7,8 +7,29 @@ $white: #fff;
 }
 html {
     scroll-behavior: smooth;
+    user-select: #ff9a00;
 }
 body {
     font-family: 'Roboto', sans-serif;
     overflow-x: hidden;
+    
+}
+.title {
+    position: relative;
+    &::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        transform: scaleX(0);
+        height: 5px;
+        bottom: -5px;
+        left: 0;
+        background-color:#ff9100;
+        transform-origin: bottom right;
+        transition: transform 0.25s ease-out;
+    }
+    &:hover::after {
+        transform: scaleX(1);
+        transform-origin: bottom left;
+    }
 }

@@ -1,11 +1,8 @@
 import { faHome, faBook, faNetworkWired, faUser } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import AOS from 'aos';
-import 'aos/dist/aos.css';
 import HeaderImg from '../assets/img/Typing-bro.svg';
 
 const Header = () => {
-    AOS.init();
     return (
         <header className="header" id="header">
             <nav className="nav-links">
