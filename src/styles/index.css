@@ -447,11 +447,8 @@ body {
 
 .contact {
   padding: 40px 0;
-  background: #f1f1f1;
-}
-
-.contact h2 {
-  text-align: center;
+  background: #000000;
+  color: #fff;
 }
 
 .contact .contactgrid {
@@ -462,6 +459,7 @@ body {
   grid-gap: 40px;
   width: 60%;
   margin: auto;
+  z-index: 2;
 }
 
 .contact .contactgrid .formarea {
@@ -469,11 +467,13 @@ body {
 }
 
 .contact .contactgrid .formarea .form {
-  background: #fff;
-  padding: 40px;
   border-radius: 20px;
   -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
           box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.contact .contactgrid .formarea .form .formtitle {
+  margin-bottom: 40px;
 }
 
 .contact .contactgrid .formarea .form .form-group {
@@ -562,20 +562,21 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  padding: 20px 20px;
+}
+
+.contact .contactgrid .details h2 {
+  margin-bottom: 20px;
 }
 
 .contact .contactgrid .details a {
   text-decoration: none;
-  color: #000;
+  color: #fff;
   display: block;
-  padding: 20px 20px;
 }
 
 .contact .contactgrid .details a svg {
@@ -606,6 +607,9 @@ body {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
   }
+  .contact .contactgrid .formarea .form {
+    padding: 40px;
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -613,6 +617,7 @@ body {
     width: 100%;
   }
   .contact .contactgrid .formarea .form {
+    padding: 20px;
     -webkit-box-shadow: none;
             box-shadow: none;
     border-radius: 0;

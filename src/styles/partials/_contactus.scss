@@ -1,23 +1,23 @@
 .contact {
     padding: 40px 0;
-    background: #f1f1f1;
-    h2{
-        text-align: center;
-    }
-
+    background: #000000;
+    color: $white;
     .contactgrid {
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-gap: 40px;
         width: 60%;
         margin: auto;
+        z-index: 2;
         .formarea {
             margin-top: 20px;
             .form {
-                background: #fff;
-                padding: 40px;
+                // padding: 40px;
                 border-radius: 20px;
                 box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+                .formtitle {
+                    margin-bottom: 40px;
+                }
                 .form-group {
                     display: flex;
                     justify-content: center;
@@ -83,13 +83,16 @@
         }
         .details {
             display: flex;
-            justify-content: center;
             flex-direction: column;
+            padding: 20px 20px;
+            h2 {
+                margin-bottom: 20px;
+            }
             a {
                 text-decoration: none;
-                color: $black;
+                color: $white;
                 display: block;
-                padding: 20px 20px;
+                
                 svg {
                     color: #ff9a00;
                 }
@@ -117,6 +120,9 @@
         .contactgrid {
             width: 80%;
             grid-template-columns: 1fr;
+            .formarea .form {
+                padding: 40px;
+            }
         }
     }
 } 
@@ -127,6 +133,7 @@
             width: 100%;
             .formarea {
                 .form {
+                    padding: 20px;
                     box-shadow: none;
                     border-radius: 0;
                 }
