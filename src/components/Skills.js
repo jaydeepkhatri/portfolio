@@ -1,4 +1,4 @@
-import { faPhp, faHtml5, faCss3, faJs, faFigma, faAirbnb } from "@fortawesome/free-brands-svg-icons";
+import { faPhp, faHtml5, faCss3, faJs, faFigma } from "@fortawesome/free-brands-svg-icons";
 import { faFire, faChartBar, faChartArea } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import mysql from '../assets/img/mysql.svg';
@@ -75,7 +75,7 @@ const Skills = () => {
                         <FontAwesomeIcon icon={faPhp} />
                     </div>
                     <div className="sec sql" data-aos="fade-up">SQL
-                        <img src={mysql} />
+                        <img src={mysql} alt="SQL" />
                     </div>
 
                 </div>
@@ -85,7 +85,7 @@ const Skills = () => {
                 <div className="group">
                     {tools.map((tool, i) => {
                         return <div className={tool.classn + " sec"} key={i} data-aos="fade-up">
-                            {tool.name} {tool.classn == "adobe" ? <img src={adobexd} /> : <FontAwesomeIcon icon={tool.icon} />}</div>
+                            {tool.name} {tool.classn === "adobe" ? <img src={adobexd} alt="Icon" /> : <FontAwesomeIcon icon={tool.icon} />}</div>
                     })}
                 </div>
             </div>

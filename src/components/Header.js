@@ -1,5 +1,3 @@
-import { faHome, faBook, faNetworkWired, faUser } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import HeaderImg from '../assets/img/Typing-bro.svg';
 
 const Header = () => {
@@ -10,7 +8,7 @@ const Header = () => {
                     <h1 data-aos="fade-up">Hello,<br /> I'm<br /> <span className="name">Jaydeep</span></h1>
                     <p className="text">Frontend Developer & Designer, aiming Backend</p>
                 </div>
-                <img src={HeaderImg} className="headerimg" data-aos="fade-left" />
+                <img src={HeaderImg} alt="Jaydeep Khatri" className="headerimg" data-aos="fade-left" />
             </div>
             <div className="circle" data-aos="fade-right">
                 <span className="chota-circle"></span>
