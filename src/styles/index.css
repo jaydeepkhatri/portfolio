@@ -377,6 +377,7 @@ body {
   color: #abc;
   font-style: italic;
   font-size: 20px;
+  margin-bottom: 40px;
 }
 
 .header .bigtext .headerimg {
@@ -442,6 +443,141 @@ body {
 @media screen and (max-width: 600px) {
   .header .bigtext h1 {
     font-size: 3rem;
+  }
+}
+
+.skills {
+  max-width: 800px;
+  margin: auto;
+  padding: 40px 0;
+}
+
+.skills .skilltitle {
+  color: #000;
+  font-size: 2em;
+}
+
+.skills .language, .skills .tools {
+  margin-top: 20px;
+}
+
+.skills .language h2, .skills .tools h2 {
+  font-weight: 400;
+}
+
+.skills .language .group, .skills .tools .group {
+  margin-top: 20px;
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 20px;
+  -ms-grid-columns: (minmax(150px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+}
+
+.skills .language .group .sec, .skills .tools .group .sec {
+  font-size: 1.2em;
+  padding: 20px;
+  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+}
+
+.skills .language .group .sec:hover, .skills .tools .group .sec:hover {
+  background: #e5f0ff;
+}
+
+.skills .language .group .sec:hover svg, .skills .language .group .sec:hover img, .skills .tools .group .sec:hover svg, .skills .tools .group .sec:hover img {
+  right: 30px;
+  opacity: 0.6;
+  -webkit-transform: scale(2) translate(0, -60%);
+          transform: scale(2) translate(0, -60%);
+}
+
+.skills .language .group .sec:hover .libs .lib, .skills .tools .group .sec:hover .libs .lib {
+  color: #1f1f1f;
+}
+
+.skills .language .group .sec svg, .skills .language .group .sec img, .skills .tools .group .sec svg, .skills .tools .group .sec img {
+  position: absolute;
+  z-index: 0;
+  width: 30px;
+  top: 50%;
+  right: -4px;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  font-size: 2em;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+}
+
+.skills .language .group .sec .libs, .skills .tools .group .sec .libs {
+  list-style: none;
+}
+
+.skills .language .group .sec .libs .lib, .skills .tools .group .sec .libs .lib {
+  color: #888;
+  padding: 2px 14px;
+  font-size: 0.9em;
+  position: relative;
+}
+
+.skills .language .group .sec .libs .lib::before, .skills .tools .group .sec .libs .lib::before {
+  content: '';
+  position: absolute;
+  width: 8px;
+  height: 1px;
+  top: 12px;
+  left: 2px;
+  background: silver;
+}
+
+.skills .language .group .sec .libs .lib::after, .skills .tools .group .sec .libs .lib::after {
+  content: '';
+  position: absolute;
+  width: 1px;
+  height: 16px;
+  top: -4px;
+  left: 2px;
+  background: silver;
+}
+
+.skills .language .group .html svg, .skills .tools .group .html svg {
+  color: #E34F26;
+}
+
+.skills .language .group .css svg, .skills .tools .group .css svg {
+  color: #1572B6;
+}
+
+.skills .language .group .js svg, .skills .tools .group .js svg {
+  color: #F7DF1E;
+}
+
+.skills .language .group .php svg, .skills .tools .group .php svg {
+  color: #777BB4;
+}
+
+.skills .language .group .figma svg, .skills .tools .group .figma svg {
+  color: #F24E1E;
+}
+
+.skills .language .group .firebase svg, .skills .tools .group .firebase svg {
+  color: #FFCA28;
+}
+
+.skills .language .group .analytics svg, .skills .tools .group .analytics svg {
+  color: #E37400;
+}
+
+@media screen and (max-width: 800px) {
+  .skills {
+    padding: 40px 20px;
   }
 }
 
