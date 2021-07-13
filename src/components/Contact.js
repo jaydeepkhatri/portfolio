@@ -12,15 +12,15 @@ const Contact = () => {
                             <h2 className="formtitle"><span className="title">Say Hello! 👋</span></h2>
                             <div className="form-group" data-aos="fade-up">
                                 <label forhtml="name">Name</label>
-                                <input type="text" id="name" className="text" placeholder="Your Name" />
+                                <input type="text" id="name" className="text" name="name" placeholder="Your Name" />
                             </div>
                             <div className="form-group" data-aos="fade-up">
                                 <label forhtml="email">Email</label>
-                                <input type="email" id="email" className="text" placeholder="Your Email" />
+                                <input type="email" id="email" className="text" name="email" placeholder="Your Email" />
                             </div>
                             <div className="form-group" data-aos="fade-up">
                                 <label forhtml="message">Message</label>
-                                <textarea className="message" rows="4" placeholder="Your Message"></textarea>
+                                <textarea className="message" rows="4" name="message" placeholder="Your Message"></textarea>
                             </div>
                             <input type="submit" value="Send" className="submit" data-aos="fade-up" />
                         </form>
