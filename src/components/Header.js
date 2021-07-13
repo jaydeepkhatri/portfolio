@@ -5,12 +5,6 @@ import HeaderImg from '../assets/img/Typing-bro.svg';
 const Header = () => {
     return (
         <header className="header" id="header">
-            <nav className="nav-links">
-                <a href="#"><FontAwesomeIcon icon={faHome} /> Home</a>
-                <a href="#"><FontAwesomeIcon icon={faBook} /> Education</a>
-                <a href="#"><FontAwesomeIcon icon={faNetworkWired} /> Experience</a>
-                <a href="#"><FontAwesomeIcon icon={faUser} /> Contact Me</a>
-            </nav>
             <div className="bigtext">
                 <div>
                     <h1 data-aos="fade-up">Hello,<br /> I'm<br /> <span className="name">Jaydeep</span></h1>

@@ -2,29 +2,6 @@
     min-height: 100vh;
     background: linear-gradient(to bottom right, #232526, #000000);
     position: relative;
-    .nav-links {
-        text-align: center;
-        padding: 12px 0;
-        transition: 0.2s;
-        a {
-            display: inline-block;
-            padding: 10px 20px;
-            text-decoration: none;
-            color: $white;
-            border-radius: 20px;
-            transition: 0.25s;
-            &:hover {
-                color: $white;
-                background: $black;
-            }
-        }
-        .menubtn {
-            display: none;
-        }
-        &:hover {
-            background: #ff6a00;
-        }
-    }
     .bigtext {
         min-height: calc(100vh - 80px);
         display: grid;
