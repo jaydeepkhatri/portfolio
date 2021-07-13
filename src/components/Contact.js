@@ -8,7 +8,7 @@ const Contact = () => {
             <section className="contact">
                 <div className="contactgrid">
                     <div className="formarea">
-                        <form className="form" name="contact" data-netlify="true" required>
+                        <form className="form" name="contact" method="POST" data-netlify="true" required>
                             <h2 className="formtitle"><span className="title">Say Hello! 👋</span></h2>
                             <div className="form-group" data-aos="fade-up">
                                 <label forhtml="name">Name</label>
