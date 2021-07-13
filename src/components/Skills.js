@@ -1,5 +1,5 @@
 import { faPhp, faHtml5, faCss3, faJs, faFigma, faAirbnb } from "@fortawesome/free-brands-svg-icons";
-import { faFire, faChartBar } from "@fortawesome/free-solid-svg-icons";
+import { faFire, faChartBar, faChartArea } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import mysql from '../assets/img/mysql.svg';
 import adobexd from '../assets/img/adobexd.svg';
@@ -31,6 +31,11 @@ const Skills = () => {
             name: "PhpMyAdmin",
             classn: 'php',
             icon: faPhp
+        },
+        {
+            name: "SEO",
+            classn: 'seo',
+            icon: faChartArea
         }
     ];
     return (
@@ -39,10 +44,10 @@ const Skills = () => {
             <div className="language">
                 <h2><span className="title">👉 Language</span></h2>
                 <div className="group">
-                    <div className="sec html">HTML5
+                    <div className="sec html" data-aos="fade-up">HTML5
                         <FontAwesomeIcon icon={faHtml5} />
                     </div>
-                    <div className="sec css">CSS3
+                    <div className="sec css" data-aos="fade-up">CSS3
                         <FontAwesomeIcon icon={faCss3} />
                         <ul className="libs">
                             <li className="lib">Bootstrap</li>
@@ -53,7 +58,7 @@ const Skills = () => {
                                 </ul>
                             </li>
                         </ul></div>
-                    <div className="sec js">JavaScript
+                    <div className="sec js" data-aos="fade-up">JavaScript
                         <FontAwesomeIcon icon={faJs} />
                         <ul className="libs">
                             <li className="lib">React</li>
@@ -66,10 +71,10 @@ const Skills = () => {
                             </li>
                         </ul>
                     </div>
-                    <div className="sec php">PHP
+                    <div className="sec php" data-aos="fade-up">PHP
                         <FontAwesomeIcon icon={faPhp} />
                     </div>
-                    <div className="sec sql">SQL
+                    <div className="sec sql" data-aos="fade-up">SQL
                         <img src={mysql} />
                     </div>
 
@@ -79,7 +84,7 @@ const Skills = () => {
                 <h2><span className="title">👉 Tools & Services</span></h2>
                 <div className="group">
                     {tools.map((tool, i) => {
-                        return <div className={tool.classn + " sec"} key={i}>
+                        return <div className={tool.classn + " sec"} key={i} data-aos="fade-up">
                             {tool.name} {tool.classn == "adobe" ? <img src={adobexd} /> : <FontAwesomeIcon icon={tool.icon} />}</div>
                     })}
                 </div>

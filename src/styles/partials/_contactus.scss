@@ -97,6 +97,10 @@
                     color: #ff9a00;
                 }
             }
+            .jdk {
+                margin-top: 40px;
+                width: 120px;
+            }
         }
     }
 }
@@ -137,6 +141,9 @@
                     box-shadow: none;
                     border-radius: 0;
                 }
+            }
+            .details .jdk {
+                display: none;
             }
         }
     }

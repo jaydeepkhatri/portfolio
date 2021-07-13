@@ -21,10 +21,12 @@
                 padding: 20px;
                 box-shadow: 0 10px 20px rgba(0,0,0,0.1);
                 border-radius: 10px;
+                border: 1px solid $white;
                 overflow: hidden;
                 position: relative;
                 transition: 0.1s;
                 &:hover {
+                    border: 1px solid rgb(240, 240, 240);
                     background: rgb(229, 240, 255);
                     svg, img {
                         right: 30px;
@@ -95,6 +97,9 @@
             }
             .analytics svg {
                 color: #E37400;
+            }
+            .seo svg {
+                color: rgb(0, 20, 39);
             }
         }
     }

@@ -480,6 +480,7 @@ body {
   -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
           box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
+  border: 1px solid #fff;
   overflow: hidden;
   position: relative;
   -webkit-transition: 0.1s;
@@ -487,6 +488,7 @@ body {
 }
 
 .skills .language .group .sec:hover, .skills .tools .group .sec:hover {
+  border: 1px solid #f0f0f0;
   background: #e5f0ff;
 }
 
@@ -573,6 +575,10 @@ body {
 
 .skills .language .group .analytics svg, .skills .tools .group .analytics svg {
   color: #E37400;
+}
+
+.skills .language .group .seo svg, .skills .tools .group .seo svg {
+  color: #001427;
 }
 
 @media screen and (max-width: 800px) {
@@ -719,6 +725,11 @@ body {
   color: #ff9a00;
 }
 
+.contact .contactgrid .details .jdk {
+  margin-top: 40px;
+  width: 120px;
+}
+
 .footer {
   padding: 20px 0;
   text-align: center;
@@ -757,6 +768,9 @@ body {
     -webkit-box-shadow: none;
             box-shadow: none;
     border-radius: 0;
+  }
+  .contact .contactgrid .details .jdk {
+    display: none;
   }
 }
 /*# sourceMappingURL=index.css.map */

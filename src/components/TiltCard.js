@@ -1,6 +1,7 @@
 import Tilt from 'react-tilt';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import coverphoto from '../assets/img/coverphoto.jpg';
+import pfp from '../assets/img/jd_profile.jpg';
 import { faFacebook, faInstagram, faTwitter, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
 const TiltCard = () => {
@@ -10,7 +11,7 @@ const TiltCard = () => {
                 <div className="coverimg" style={{
                     backgroundImage: `url("${coverphoto}")`
                 }}>
-                    <img src="./img/profile.jpg" alt="Jaydeep Khatri" className="card-image" />
+                    <img src={pfp} alt="Jaydeep Khatri" className="card-image" />
                 </div>
                 <h2 className="title">Jaydeep Khatri</h2>
                 <button className="contact">Contact Me</button>
