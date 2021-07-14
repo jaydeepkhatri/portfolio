@@ -27,7 +27,7 @@ const Contact = () => {
                     </div>
                     <div className="details">
                         <h2>Email</h2>
-                        <a href="mailto:jaydeepkhatri79@gmail.com" data-aos="fade-left"><FontAwesomeIcon icon={faEnvelope} /> jaydeepkhatri79@gmail.com</a>
+                        <a href="mailto:jaydeepkhatri79@gmail.com" data-aos="fade-up"><FontAwesomeIcon icon={faEnvelope} /> jaydeepkhatri79@gmail.com</a>
                         <img src={jdk} className="jdk" alt="JDK" title="JD" />
                     </div>
                 </div>
