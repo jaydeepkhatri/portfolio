@@ -4,11 +4,11 @@ import Cursor from './components/Cursor';
 import Header from './components/Header';
 import Contact from './components/Contact';
 import Skills from './components/Skills';
+import Me from './components/Me';
 import ScrollDown from './components/ScrollDown';
 
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import Me from './components/Me';
 
 const App = () => {
   AOS.init();

@@ -1,6 +1,6 @@
 .header {
     min-height: 100vh;
-    background: linear-gradient(to bottom right, #232526, #000000);
+    background: linear-gradient(to bottom right, #202020, #000000);
     position: relative;
     .bigtext {
         min-height: calc(100vh - 80px);
@@ -41,7 +41,7 @@
                 }
             }
             .text {
-                color:#abc;
+                color:rgb(209, 209, 209);
                 font-style: italic;
                 font-size: 20px;
                 margin-bottom: 40px;

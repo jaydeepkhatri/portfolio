@@ -277,8 +277,8 @@ body {
 
 .header {
   min-height: 100vh;
-  background: -webkit-gradient(linear, left top, right bottom, from(#232526), to(#000000));
-  background: linear-gradient(to bottom right, #232526, #000000);
+  background: -webkit-gradient(linear, left top, right bottom, from(#202020), to(#000000));
+  background: linear-gradient(to bottom right, #202020, #000000);
   position: relative;
 }
 
@@ -314,7 +314,7 @@ body {
 }
 
 .header .bigtext div .text {
-  color: #abc;
+  color: #d1d1d1;
   font-style: italic;
   font-size: 20px;
   margin-bottom: 40px;
@@ -437,6 +437,24 @@ body {
   left: 0;
   font-size: 3em;
   opacity: 0.4;
+}
+
+.profile .foralignment .desc .backgrd {
+  position: absolute;
+  top: -120px;
+  right: 40px;
+  height: 200px;
+  width: 100px;
+  background: radial-gradient(#ff880040 25%, transparent 25%);
+  background-size: 10px 10px;
+  background-repeat: repeat;
+  z-index: 1;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+}
+
+.profile .foralignment .desc .backgrd:hover {
+  background-size: 20px 20px;
 }
 
 @media screen and (max-width: 800px) {

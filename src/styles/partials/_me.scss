@@ -35,6 +35,21 @@
                 font-size: 3em;
                 opacity: 0.4;
             }
+            .backgrd {
+                position: absolute;
+                top: -120px;
+                right: 40px;
+                height: 200px;
+                width:  100px;
+                background: radial-gradient(#ff880040 25%, transparent 25%);
+                background-size: 10px 10px;
+                background-repeat: repeat;
+                z-index: 1;
+                transition: 0.1s;
+                &:hover {
+                    background-size: 20px 20px;
+                }
+            }
         }
     }
 }
