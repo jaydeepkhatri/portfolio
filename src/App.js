@@ -8,6 +8,7 @@ import ScrollDown from './components/ScrollDown';
 
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import Me from './components/Me';
 
 const App = () => {
   AOS.init();
@@ -15,6 +16,7 @@ const App = () => {
     <>
       {window.innerWidth > 800 ? <><Cursor /><TiltCard /></> : null}
       <Header />
+      <Me />
       <Skills />
       <Contact />
       <ScrollDown />

@@ -1,0 +1,51 @@
+.profile {
+    padding: 60px 0;
+    background: $black;
+    .foralignment {
+        max-width:  1000px;
+        margin: auto;
+        display: grid;
+        grid-gap: 20px;
+        grid-template-columns: 1fr 1fr;
+        place-items: center;
+        .pic {
+            position: relative;
+            img {
+                filter: grayscale(100%);
+                border-radius: 50%;
+            }
+        }
+        .desc {
+            color: $white;
+            padding: 20px;
+            font-size: 1.2em;
+            position: relative;
+            strong {
+                color: #ffa900;
+            }
+            &::first-letter {
+                font-size: 2em;
+
+            }
+            &::before {
+                content: open-quote;
+                position: absolute;
+                top: 0;
+                left: 0;
+                font-size: 3em;
+                opacity: 0.4;
+            }
+        }
+    }
+}
+@media screen and (max-width: 800px) {
+    .profile {
+        padding: 40px 0;
+        .foralignment {
+            grid-template-columns: 1fr;
+            .desc {
+                padding: 20px 60px;
+            }
+        }
+    }
+}
