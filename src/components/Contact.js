@@ -8,7 +8,7 @@ const Contact = () => {
             <section className="contact">
                 <div className="contactgrid">
                     <div className="formarea">
-                        <form className="form" name="contact" method="POST" required>
+                        <form className="form" name="contact" action="/contact" method="POST" required>
                             <input type="hidden" name="form-name" value="contact" />
                             <h2 className="formtitle"><span className="title">Say Hello! 👋</span></h2>
                             <div className="form-group" data-aos="fade-up">
