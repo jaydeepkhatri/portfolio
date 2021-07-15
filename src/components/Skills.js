@@ -84,7 +84,7 @@ const Skills = () => {
                 <h2><span className="title">👉 Tools & Services</span></h2>
                 <div className="group">
                     {tools.map((tool, i) => {
-                        return <div className={tool.classn + " sec"} key={i} data-aos="fade-up">
+                        return <div className={tool.classn + " sec"} key={i} data-aos="fade-up" data-aos-delay={50 * (i + 1)}>
                             {tool.name} {tool.classn === "adobe" ? <img src={adobexd} alt="Icon" /> : <FontAwesomeIcon icon={tool.icon} />}</div>
                     })}
                 </div>
