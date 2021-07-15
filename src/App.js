@@ -6,15 +6,10 @@ import Contact from './components/Contact';
 import Skills from './components/Skills';
 import Me from './components/Me';
 import ScrollDown from './components/ScrollDown';
-import ReactGA from 'react-ga'
 
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
-function initializeReactGA() {
-  ReactGA.initialize('G-R183VLTGFL');
-  ReactGA.pageview('/Header');
-}
 
 const App = () => {
   AOS.init();
