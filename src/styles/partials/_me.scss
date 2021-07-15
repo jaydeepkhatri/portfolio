@@ -23,6 +23,31 @@
             strong {
                 color: #ffa900;
             }
+            .cv {
+                display: inline-block;
+                margin-top: 40px;
+                padding: 12px 32px;
+                background: #ffa900;
+                text-decoration: none;
+                color:$black;
+            }
+            .social {
+                margin-top: 20px;
+                list-style: none;
+                .sociallink {
+                    display: inline-block;
+                    margin: 6px;
+                    a {
+                        text-decoration: none;
+                        color: $white;
+                        font-size: 1.2em;
+                        transition: 0.1s;
+                        &:hover {
+                            color: #ffa900;
+                        }
+                    }
+                }
+            }
             &::first-letter {
                 font-size: 2em;
 

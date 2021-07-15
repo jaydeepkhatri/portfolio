@@ -426,6 +426,37 @@ body {
   color: #ffa900;
 }
 
+.profile .foralignment .desc .cv {
+  display: inline-block;
+  margin-top: 40px;
+  padding: 12px 32px;
+  background: #ffa900;
+  text-decoration: none;
+  color: #000;
+}
+
+.profile .foralignment .desc .social {
+  margin-top: 20px;
+  list-style: none;
+}
+
+.profile .foralignment .desc .social .sociallink {
+  display: inline-block;
+  margin: 6px;
+}
+
+.profile .foralignment .desc .social .sociallink a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.2em;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+}
+
+.profile .foralignment .desc .social .sociallink a:hover {
+  color: #ffa900;
+}
+
 .profile .foralignment .desc::first-letter {
   font-size: 2em;
 }
