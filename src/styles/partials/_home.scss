@@ -1,5 +1,7 @@
 $black: #000;
 $white: #fff;
+$theme: #ff0062;
+$yellow: #ffa900;
 * {
     margin: 0;
     padding: 0;
@@ -24,7 +26,7 @@ body {
         height: 5px;
         bottom: -5px;
         left: 0;
-        background-color:#ff9100;
+        background-color: rgba($theme, 0.5);
         transform-origin: bottom right;
         transition: transform 0.25s ease-out;
     }

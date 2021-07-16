@@ -2,12 +2,12 @@
 	width: 2.2rem;
 	height: 2.2rem;
 	z-index: 9;
-	border: 2px solid black;
+	border: 2px solid $black;
 	border-radius: 50%;
 	position: absolute;
 	transform: translate(-50%, -50%);
 	pointer-events: none;
-	background: white;
+	background: $white;
 	opacity: 0.4;
 	transition: 125ms;
 	&::after {

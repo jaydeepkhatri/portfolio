@@ -5,7 +5,7 @@ const Header = () => {
         <header className="header" id="header">
             <div className="bigtext">
                 <div>
-                    <h1 data-aos="fade-up">Hello,<br /> I'm<br /> <span className="name">Jaydeep</span></h1>
+                    <h1 data-aos="fade-up">Hello.<br /> I'm<br /> <span className="name">Jaydeep</span></h1>
                     <p className="text">Frontend Developer & Designer, aiming Backend</p>
                 </div>
                 <img src={HeaderImg} alt="Jaydeep Khatri" className="headerimg" data-aos="fade-left" />

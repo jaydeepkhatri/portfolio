@@ -31,7 +31,7 @@ body {
   height: 5px;
   bottom: -5px;
   left: 0;
-  background-color: #ff9100;
+  background-color: rgba(255, 0, 98, 0.5);
   -webkit-transform-origin: bottom right;
           transform-origin: bottom right;
   -webkit-transition: -webkit-transform 0.25s ease-out;
@@ -250,13 +250,13 @@ body {
   width: 2.2rem;
   height: 2.2rem;
   z-index: 9;
-  border: 2px solid black;
+  border: 2px solid #000;
   border-radius: 50%;
   position: absolute;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   pointer-events: none;
-  background: white;
+  background: #fff;
   opacity: 0.4;
   -webkit-transition: 125ms;
   transition: 125ms;
@@ -277,8 +277,8 @@ body {
 
 .header {
   min-height: 100vh;
-  background: -webkit-gradient(linear, left top, right bottom, from(#202020), to(#000000));
-  background: linear-gradient(to bottom right, #202020, #000000);
+  background: -webkit-gradient(linear, left top, right bottom, from(#f0f0f0), to(#fff));
+  background: linear-gradient(to bottom right, #f0f0f0, #fff);
   position: relative;
 }
 
@@ -301,20 +301,18 @@ body {
 .header .bigtext div h1 {
   font-size: 10rem;
   padding: 30px 0;
-  color: #fff;
-  text-shadow: -0.0075em 0.0075em 0 #fafafa, 0.005em 0.005em 0 gainsboro, 0.01em 0.01em 0 #dedede, 0.015em 0.015em #e0e0e0, 0.02em 0.02em 0 #e1e1e1, 0.025em 0.025em 0 #e3e3e3, 0.03em 0.03em 0 #e5e5e5, 0.035em 0.035em 0 #e7e7e7;
+  color: #000;
   -webkit-transition: 125ms;
   transition: 125ms;
 }
 
 .header .bigtext div h1 .name {
   font-weight: bold;
-  color: #ff6a00;
-  text-shadow: -0.0075em 0.0075em 0 #fff8f0, 0.005em 0.005em 0 #ffd399, 0.01em 0.01em 0 #ffd59e, 0.015em 0.015em #ffd7a3, 0.02em 0.02em 0 #ff3100, 0.025em 0.025em 0 #ff2e00, 0.03em 0.03em 0 #ff2c00, 0.035em 0.035em 0 #ff2900;
+  color: #ff0062;
 }
 
 .header .bigtext div .text {
-  color: #d1d1d1;
+  color: #a5a5a5;
   font-style: italic;
   font-size: 20px;
   margin-bottom: 40px;
@@ -333,7 +331,7 @@ body {
   width: 150px;
   height: 150px;
   border-radius: 50%;
-  background: #ff6a0069;
+  background: rgba(255, 0, 98, 0.6);
 }
 
 .header .circle .chota-circle {
@@ -343,15 +341,7 @@ body {
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  background: #ff6a0069;
-}
-
-.header .circle .chota-circle:hover {
-  background: #ff6a00;
-}
-
-.header .circle:hover {
-  background: #ff6a00;
+  background: rgba(255, 0, 98, 0.6);
 }
 
 @media screen and (max-width: 1000px) {
@@ -423,14 +413,14 @@ body {
 }
 
 .profile .foralignment .desc strong {
-  color: #ffa900;
+  color: #ff0062;
 }
 
 .profile .foralignment .desc .cv {
   display: inline-block;
   margin-top: 40px;
   padding: 12px 32px;
-  background: #ffa900;
+  background: #ff0062;
   text-decoration: none;
   color: #000;
 }
@@ -454,7 +444,7 @@ body {
 }
 
 .profile .foralignment .desc .social .sociallink a:hover {
-  color: #ffa900;
+  color: #ff0062;
 }
 
 .profile .foralignment .desc::first-letter {
@@ -644,7 +634,7 @@ body {
 
 .contact {
   padding: 40px 0;
-  background: #000000;
+  background: #000;
   color: #fff;
 }
 
@@ -701,12 +691,12 @@ body {
   margin-top: 2px;
   border-radius: 4px;
   color: #fff;
-  caret-color: #ff9a00;
+  caret-color: #ff0062;
 }
 
 .contact .contactgrid .formarea .form .form-group .text:hover, .contact .contactgrid .formarea .form .form-group .text:focus, .contact .contactgrid .formarea .form .form-group .text:active {
-  -webkit-box-shadow: 0 0 5px #ff9a00;
-          box-shadow: 0 0 5px #ff9a00;
+  -webkit-box-shadow: 0 0 5px #ff0062;
+          box-shadow: 0 0 5px #ff0062;
 }
 
 .contact .contactgrid .formarea .form .form-group .message {
@@ -717,18 +707,19 @@ body {
   color: #fff;
   resize: none;
   border-radius: 4px;
-  caret-color: #ff9a00;
+  caret-color: #ff0062;
 }
 
 .contact .contactgrid .formarea .form .form-group .message:hover, .contact .contactgrid .formarea .form .form-group .message:focus, .contact .contactgrid .formarea .form .form-group .message:active {
-  -webkit-box-shadow: 0 0 5px #ff9a00;
-          box-shadow: 0 0 5px #ff9a00;
+  -webkit-box-shadow: 0 0 5px #ff0062;
+          box-shadow: 0 0 5px #ff0062;
 }
 
 .contact .contactgrid .formarea .form .submit {
   padding: 8px 32px;
   border: none;
-  background: #ff9a00;
+  background: #ff0062;
+  color: #fff;
   letter-spacing: 1px;
   font-size: 18px;
   position: relative;
@@ -736,8 +727,8 @@ body {
   left: 0;
   border-radius: 4px;
   text-transform: uppercase;
-  -webkit-box-shadow: 0 6px #b46c00;
-          box-shadow: 0 6px #b46c00;
+  -webkit-box-shadow: 0 6px rgba(255, 0, 98, 0.5);
+          box-shadow: 0 6px rgba(255, 0, 98, 0.5);
   -webkit-transition: 0.12s;
   transition: 0.12s;
 }
@@ -745,14 +736,14 @@ body {
 .contact .contactgrid .formarea .form .submit:hover {
   top: 3px;
   left: 0;
-  -webkit-box-shadow: 0 3px #b46c00, 0 5px 10px #b46c00;
-          box-shadow: 0 3px #b46c00, 0 5px 10px #b46c00;
+  -webkit-box-shadow: 0 3px rgba(255, 0, 98, 0.5), 0 5px 10px rgba(255, 0, 98, 0.5);
+          box-shadow: 0 3px rgba(255, 0, 98, 0.5), 0 5px 10px rgba(255, 0, 98, 0.5);
 }
 
 .contact .contactgrid .formarea .form .submit:active {
   top: 6px;
-  -webkit-box-shadow: 0 0 #b46c00, 0 5px 10px #b46c00;
-          box-shadow: 0 0 #b46c00, 0 5px 10px #b46c00;
+  -webkit-box-shadow: 0 0 rgba(255, 0, 98, 0.5), 0 5px 10px rgba(255, 0, 98, 0.5);
+          box-shadow: 0 0 rgba(255, 0, 98, 0.5), 0 5px 10px rgba(255, 0, 98, 0.5);
 }
 
 .contact .contactgrid .details {
@@ -777,7 +768,7 @@ body {
 }
 
 .contact .contactgrid .details a svg {
-  color: #ff9a00;
+  color: #ff0062;
 }
 
 .contact .contactgrid .details .jdk {
@@ -788,19 +779,10 @@ body {
 .footer {
   padding: 20px 0;
   text-align: center;
-  background: #000;
+  background: #ff0062;
   color: #fff;
   letter-spacing: 2px;
   cursor: default;
-}
-
-.footer:hover svg {
-  color: #ff9a00;
-}
-
-.footer svg {
-  -webkit-transition: 0.1s;
-  transition: 0.1s;
 }
 
 @media screen and (max-width: 1000px) {
@@ -856,6 +838,8 @@ body {
 }
 
 .scrolldown:hover {
-  background: #ff9a00;
+  background: #ff0062;
+  color: #fff;
+  border: 2px solid #fff;
 }
 /*# sourceMappingURL=index.css.map */

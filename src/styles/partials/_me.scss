@@ -21,13 +21,13 @@
             font-size: 1.2em;
             position: relative;
             strong {
-                color: #ffa900;
+                color: $theme;
             }
             .cv {
                 display: inline-block;
                 margin-top: 40px;
                 padding: 12px 32px;
-                background: #ffa900;
+                background: $theme;
                 text-decoration: none;
                 color:$black;
             }
@@ -43,7 +43,7 @@
                         font-size: 1.2em;
                         transition: 0.1s;
                         &:hover {
-                            color: #ffa900;
+                            color: $theme;
                         }
                     }
                 }
