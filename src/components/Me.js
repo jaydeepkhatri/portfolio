@@ -35,7 +35,7 @@ const Me = () => {
                     <a href={resume} className="cv" data-aos="fade-up" download><FontAwesomeIcon icon={faFile} /> Download Resume</a>
                     <ul className="social">
                         {social.map((soc, i) => {
-                            return <li className="sociallink" key={i} data-aos="fade-up" data-aos-delay={50 * (i + 1)}><a href={soc.link} target="_blank"><FontAwesomeIcon icon={soc.icon} /></a></li>
+                            return <li className="sociallink" key={i} data-aos="fade-up" data-aos-delay={50 * (i + 1)}><a href={soc.link} target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={soc.icon} /></a></li>
                         })}
                     </ul>
                     <div className="backgrd"></div>
