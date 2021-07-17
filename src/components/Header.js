@@ -1,4 +1,4 @@
-import bgimg from '../assets/img/img.png';
+import bgimg from '../assets/img/img.webp';
 
 const Header = () => {
     return (

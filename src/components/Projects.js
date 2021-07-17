@@ -1,9 +1,9 @@
-import currencyconverter from '../assets/img/currencyconverter.png';
-import eventmania from '../assets/img/eventmania.png';
-import minifier from '../assets/img/minifier.png';
-import twitterclone from '../assets/img/twitterclone.png';
-import vartalap from '../assets/img/vartalap.png';
-import whatshouldido from '../assets/img/whatshouldido.png';
+import currencyconverter from '../assets/img/currencyconverter.webp';
+import eventmania from '../assets/img/eventmania.webp';
+import minifier from '../assets/img/minifier.webp';
+import twitterclone from '../assets/img/twitterclone.webp';
+import vartalap from '../assets/img/vartalap.webp';
+import whatshouldido from '../assets/img/whatshouldido.webp';
 
 const data = [
     {
