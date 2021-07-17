@@ -21,15 +21,15 @@
             font-size: 1.2em;
             position: relative;
             strong {
-                color: $theme;
+                color: $text;
             }
             .cv {
                 display: inline-block;
                 margin-top: 40px;
                 padding: 12px 32px;
                 background: $theme;
+                color: rgba($white, 0.9);
                 text-decoration: none;
-                color:$black;
             }
             .social {
                 margin-top: 20px;

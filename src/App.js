@@ -1,5 +1,4 @@
 import './styles/index.css';
-import TiltCard from "./components/TiltCard";
 import Cursor from './components/Cursor';
 import Header from './components/Header';
 import Contact from './components/Contact';
@@ -15,7 +14,7 @@ const App = () => {
   AOS.init();
   return (
     <>
-      {window.innerWidth > 800 ? <><Cursor /><TiltCard /></> : null}
+      {window.innerWidth > 800 ? <><Cursor /></> : null}
       <Header />
       <Me />
       <Skills />
