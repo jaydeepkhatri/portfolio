@@ -1,0 +1,89 @@
+$black: #000;
+$white: #fff;
+$theme: #13d6c1;
+$text: rgb(0, 141, 223);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+    max-width: 1920px;
+    margin: 0 auto;
+    background: linear-gradient(to right, #191c1f, #151b25, #191c1f);
+    color: $white;
+}
+
+@mixin padding($value) {
+    padding: $value*8px;    
+}
+
+@mixin fontsize($value) {
+    font-size: $value*8px;    
+}
+
+@mixin flexaligncenter {
+    display: flex;
+    align-items: center;
+}
+
+.section {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 40px;
+}
+.btn {
+    display: inline-block;
+    margin-top: 40px;
+    font-size: 0.9em;
+    padding: 12px 32px;
+    background: $theme;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: rgba($black, 0.9);
+    text-decoration: none;
+    transition: 0.1s;
+    &:hover {
+        background: #13c0af;
+    }
+    svg {
+        vertical-align: middle;
+        margin-right: 0.5em;
+    }
+}
+.title {
+    position: relative;
+    text-align: center;
+    @include fontsize(3);
+    &::after {
+        content: attr(data-text);
+        position: absolute;
+        bottom: -40px;
+        @include fontsize(4);
+        left: 0;
+        color: $black;
+        opacity: 0.3;
+        right: 0;
+    }
+}
+
+::selection {
+    background: $white;
+    color: $black;
+}
+
+
+
+@import './partials/cursor';
+@import './partials/header';
+@import './partials/me';
+@import './partials/projects';
+@import './partials/skills';
+@import './partials/footer';
+@import './partials/scrolldown';

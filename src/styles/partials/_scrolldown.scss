@@ -8,17 +8,16 @@
 	height: 48px;
 	border-radius: 50%;
 	cursor: pointer;
-
-	display: flex;
-	align-items: center;
+	@include flexaligncenter;
 	justify-content: center;
-	background: $white;
+	background: $theme;
+	color: $black;
 	border: 2px solid $black;
 	z-index:5;
 	transition: 0.2s;
 	&:hover {
-		background: $theme;
-		color: $white;
+		background: $black;
+		color: $theme;
 		border: 2px solid $white;
 	}
 }

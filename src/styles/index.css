@@ -146,7 +146,7 @@ body {
 
 .profile {
   padding: 60px 0;
-  background: #000;
+  background: #fff;
 }
 
 .profile .foralignment {
@@ -165,13 +165,21 @@ body {
 }
 
 .profile .foralignment .pic img {
-  -webkit-filter: grayscale(100%);
-          filter: grayscale(100%);
+  width: 320px;
+  height: 320px;
   border-radius: 50%;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+  position: relative;
+}
+
+.profile .foralignment .pic img:hover {
+  -webkit-filter: grayscale(0);
+          filter: grayscale(0);
 }
 
 .profile .foralignment .desc {
-  color: #fff;
+  color: #000;
   padding: 20px;
   font-size: 1.2em;
   position: relative;
@@ -188,6 +196,14 @@ body {
   background: #1556ad;
   color: rgba(255, 255, 255, 0.9);
   text-decoration: none;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+  -webkit-box-shadow: 0 10px 20px 40px rgba(0, 0, 0, 0.05);
+          box-shadow: 0 10px 20px 40px rgba(0, 0, 0, 0.05);
+}
+
+.profile .foralignment .desc .cv:hover {
+  background: #003553;
 }
 
 .profile .foralignment .desc .social {
@@ -254,6 +270,27 @@ body {
   .profile .foralignment .desc {
     padding: 20px 60px;
   }
+}
+
+.worksection {
+  background: #eee;
+  padding: 60px;
+}
+
+.worksection .worktitle {
+  font-size: 2em;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.worksection .work {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 3fr 7fr;
+      grid-template-columns: 3fr 7fr;
+  grid-gap: 20px;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .skills {
@@ -357,6 +394,11 @@ body {
   top: -4px;
   left: 2px;
   background: silver;
+}
+
+.skills .language .group .html:hover, .skills .tools .group .html:hover {
+  background: #abc;
+  color: #f00;
 }
 
 @media screen and (max-width: 800px) {

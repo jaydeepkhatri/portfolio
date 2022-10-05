@@ -1,90 +1,63 @@
-.profile {
-    padding: 60px 0;
+#view {
+    padding:120px 0;
     background: $black;
+    max-width: 100%;
     .foralignment {
-        max-width:  1000px;
+        max-width:  1400px;
         margin: auto;
         display: grid;
         grid-gap: 20px;
-        grid-template-columns: 1fr 1fr;
+        @include padding(2);
+        grid-template-columns: 1fr 2fr;
         place-items: center;
         .pic {
             position: relative;
             img {
-                filter: grayscale(100%);
+                width: 250px;
+                height: 250px;
                 border-radius: 50%;
             }
         }
         .desc {
-            color: $white;
+            
             padding: 20px;
-            font-size: 1.2em;
             position: relative;
-            strong {
-                color: $text;
-            }
-            .cv {
-                display: inline-block;
-                margin-top: 40px;
-                padding: 12px 32px;
-                background: $theme;
-                color: rgba($white, 0.9);
-                text-decoration: none;
-            }
-            .social {
-                margin-top: 20px;
-                list-style: none;
-                .sociallink {
-                    display: inline-block;
-                    margin: 6px;
-                    a {
-                        text-decoration: none;
-                        color: $white;
-                        font-size: 1.2em;
-                        transition: 0.1s;
-                        &:hover {
-                            color: $theme;
-                        }
-                    }
+            p {
+                @include fontsize(2.2);
+                color: $white;
+                line-height: 1.5;
+                opacity: 0.9;
+                letter-spacing: 0.5px;
+                span {
+                    color: $theme;
+                    font-weight: 700;
                 }
-            }
-            &::first-letter {
-                font-size: 2em;
-
             }
             &::before {
                 content: open-quote;
                 position: absolute;
                 top: 0;
                 left: 0;
-                font-size: 3em;
+                color: $theme;
+                @include fontsize(4);
                 opacity: 0.4;
-            }
-            .backgrd {
-                position: absolute;
-                top: -120px;
-                right: 40px;
-                height: 200px;
-                width:  100px;
-                background: radial-gradient(#ff880040 25%, transparent 25%);
-                background-size: 10px 10px;
-                background-repeat: repeat;
-                z-index: 1;
-                transition: 0.1s;
-                &:hover {
-                    background-size: 20px 20px;
-                }
             }
         }
     }
 }
-@media screen and (max-width: 800px) {
-    .profile {
-        padding: 40px 0;
+@media screen and (max-width: 992px) {
+    #view {
+        padding: 60px 0;
         .foralignment {
             grid-template-columns: 1fr;
+            grid-gap: 12px;
+            .pic img {
+                width: 200px;
+                height: 200px;
+            }
             .desc {
-                padding: 20px 60px;
+                padding: 12px 24px;
+                text-align: justify;
             }
         }
     }

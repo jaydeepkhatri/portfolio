@@ -1,47 +1,46 @@
-import { faPhp, faHtml5, faCss3, faJs, faFigma } from "@fortawesome/free-brands-svg-icons";
-import { faFire, faChartBar, faChartArea } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import mysql from '../assets/img/mysql.svg';
-import adobexd from '../assets/img/adobexd.svg';
+import {SiPhp, SiHtml5, SiCss3, SiJavascript, SiFirebase, SiGoogleanalytics, SiMysql, SiAdobexd} from "react-icons/si";
+import {CgFigma} from "react-icons/cg";
+import {AiOutlineAreaChart} from "react-icons/ai";
+
 
 
 const Skills = () => {
     const tools = [
         {
             name: 'Adobe XD',
-            icon: adobexd
+            icon: SiAdobexd
         },
         {
             name: 'Figma',
-            icon: faFigma
+            icon: CgFigma
         },
         {
             name: "Firebase",
-            icon: faFire
+            icon: SiFirebase
         },
         {
             name: "Google Analytics",
-            icon: faChartBar
+            icon: SiGoogleanalytics
         },
         {
             name: "PhpMyAdmin",
-            icon: faPhp
+            icon: SiPhp
         }
     ];
     return (
-        <section className="skills">
-            <h1 className="skilltitle">Skills 💻</h1>
+        <section className="section skills">
+            <h1 className="title">Skills ⚒️</h1>
             <div className="language">
-                <h2><span className="title">Language</span></h2>
+                <h2><span className="title">Languages</span></h2>
                 <div className="group">
                     <div className="sec html" data-aos="fade-up">HTML5
-                        <FontAwesomeIcon icon={faHtml5} />
+                        <SiHtml5 />
                         <ul className="libs">
                             <li className="lib">Markdown</li>
                         </ul>
                     </div>
                     <div className="sec css" data-aos="fade-up">CSS3
-                        <FontAwesomeIcon icon={faCss3} />
+                        <SiCss3 />
                         <ul className="libs">
                             <li className="lib">Bootstrap</li>
                             <li className="lib">Materialize</li>
@@ -52,22 +51,19 @@ const Skills = () => {
                             </li>
                         </ul></div>
                     <div className="sec js" data-aos="fade-up">JavaScript
-                        <FontAwesomeIcon icon={faJs} />
+                        <SiJavascript />
                         <ul className="libs">
                             <li className="lib">React</li>
                             <li className="lib">jQuery</li>
-                            <li className="lib">NPM
-                                <ul className="libs">
-                                    <li className="lib">Socket.io</li>
-                                </ul>
-                            </li>
+                            <li className="lib">NPM</li>
+                            <li className="lib">Socket.io</li>
                         </ul>
                     </div>
                     <div className="sec php" data-aos="fade-up">PHP
-                        <FontAwesomeIcon icon={faPhp} />
+                        <SiPhp />
                     </div>
                     <div className="sec sql" data-aos="fade-up">SQL
-                        <img src={mysql} alt="SQL" />
+                        <SiMysql />
                     </div>
 
                 </div>
@@ -77,10 +73,11 @@ const Skills = () => {
                 <div className="group">
                     {tools.map((tool, i) => {
                         return <div className={tool.classn + " sec"} key={i} data-aos="fade-up" data-aos-delay={50 * (i + 1)}>
-                            {tool.name} {tool.name === "Adobe XD" ? <img src={adobexd} alt="Icon" /> : <FontAwesomeIcon icon={tool.icon} />}</div>
+                                {tool.name} <tool.icon />
+                            </div>
                     })}
                     <ul className="sec seo" data-aos="fade-up" data-aos-delay="300">
-                    SEO <FontAwesomeIcon icon={faChartArea} />
+                    SEO <AiOutlineAreaChart />
                         <ul className="libs">
                                 <li className="lib">Schema</li>
                         </ul>

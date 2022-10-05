@@ -1,6 +1,7 @@
 import { Component } from "react";
 
 
+
 export default class Cursor extends Component {
     componentDidMount() {
         const mouseCursor = document.querySelector('.cursor');
@@ -12,7 +13,7 @@ export default class Cursor extends Component {
     render() {
         return (
             <>
-                <div className="cursor" ></div>
+                {window.innerWidth > 768 ? <div className="cursor" ></div> : null}
             </>
         )
     }

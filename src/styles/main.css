@@ -1,0 +1,577 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  overflow-x: hidden;
+  max-width: 1920px;
+  margin: 0 auto;
+  background: linear-gradient(to right, #191c1f, #151b25, #191c1f);
+  color: #fff;
+}
+
+.section {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 40px;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 40px;
+  font-size: 0.9em;
+  padding: 12px 32px;
+  background: #13d6c1;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: rgba(0, 0, 0, 0.9);
+  text-decoration: none;
+  transition: 0.1s;
+}
+.btn:hover {
+  background: #13c0af;
+}
+.btn svg {
+  vertical-align: middle;
+  margin-right: 0.5em;
+}
+
+.title {
+  position: relative;
+  text-align: center;
+  font-size: 24px;
+}
+.title::after {
+  content: attr(data-text);
+  position: absolute;
+  bottom: -40px;
+  font-size: 32px;
+  left: 0;
+  color: #000;
+  opacity: 0.3;
+  right: 0;
+}
+
+::-moz-selection {
+  background: #fff;
+  color: #000;
+}
+
+::selection {
+  background: #fff;
+  color: #000;
+}
+
+.cursor {
+  width: 2.2rem;
+  height: 2.2rem;
+  z-index: 9;
+  border: 2px solid #13d6c1;
+  border-radius: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  background: transparent;
+  opacity: 1;
+  transition: 75ms;
+  transition-timing-function: ease-in-out;
+}
+.cursor::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 8px;
+  height: 8px;
+  border: 2px solid #13d6c1;
+  border-radius: 50%;
+}
+
+.header {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.header h1 {
+  font-size: 64px;
+  padding: 16px 0;
+  color: #13d6c1;
+  transition: 125ms;
+  display: inline-block;
+}
+.header .subtitle {
+  font-size: 1.2em;
+}
+.header .text {
+  color: rgb(204, 204, 204);
+  font-size: 20px;
+  margin-bottom: 40px;
+}
+.header .social {
+  margin-top: 20px;
+  list-style: none;
+}
+.header .social .sociallink {
+  display: inline-block;
+  margin: 8px;
+}
+.header .social .sociallink a {
+  text-decoration: none;
+  color: #13d6c1;
+  font-size: 1.5em;
+  transition: 0.1s;
+}
+.header .social .sociallink a svg {
+  vertical-align: middle;
+}
+.header .social .sociallink a:hover {
+  color: #000;
+}
+.header .bottomarrow {
+  cursor: pointer;
+  position: absolute;
+  bottom: 80px;
+  right: 50%;
+  transform: translateX(50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  color: #fff;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  transition: 0.1s;
+}
+.header .bottomarrow:hover {
+  border: 2px solid #fff;
+}
+
+@media screen and (max-width: 1000px) {
+  .header {
+    padding-left: 0;
+    text-align: center;
+  }
+  .header .social {
+    margin: 0;
+  }
+}
+@media screen and (max-width: 800px) {
+  .header {
+    grid-template-columns: 1fr;
+  }
+  .header h1 {
+    font-size: 80px;
+  }
+  .header .subtitle {
+    padding: 8px;
+  }
+  .header .headerimg {
+    display: none;
+  }
+}
+@media screen and (max-width: 600px) {
+  .header {
+    padding: 20px;
+  }
+  .header h1 {
+    font-size: 48px;
+    padding: 0px;
+  }
+  .header .subtitle {
+    font-size: 16px;
+  }
+}
+@media screen and (max-height: 450px) {
+  .header .bottomarrow {
+    display: none;
+  }
+}
+#view {
+  padding: 120px 0;
+  background: #000;
+  max-width: 100%;
+}
+#view .foralignment {
+  max-width: 1400px;
+  margin: auto;
+  display: grid;
+  grid-gap: 20px;
+  padding: 16px;
+  grid-template-columns: 1fr 2fr;
+  place-items: center;
+}
+#view .foralignment .pic {
+  position: relative;
+}
+#view .foralignment .pic img {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+}
+#view .foralignment .desc {
+  padding: 20px;
+  position: relative;
+}
+#view .foralignment .desc p {
+  font-size: 17.6px;
+  color: #fff;
+  line-height: 1.5;
+  opacity: 0.9;
+  letter-spacing: 0.5px;
+}
+#view .foralignment .desc p span {
+  color: #13d6c1;
+  font-weight: 700;
+}
+#view .foralignment .desc::before {
+  content: open-quote;
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #13d6c1;
+  font-size: 32px;
+  opacity: 0.4;
+}
+
+@media screen and (max-width: 992px) {
+  #view {
+    padding: 60px 0;
+  }
+  #view .foralignment {
+    grid-template-columns: 1fr;
+    grid-gap: 12px;
+  }
+  #view .foralignment .pic img {
+    width: 200px;
+    height: 200px;
+  }
+  #view .foralignment .desc {
+    padding: 12px 24px;
+    text-align: justify;
+  }
+}
+.projects {
+  position: relative;
+}
+.projects .title {
+  text-align: center;
+  margin-bottom: 32px;
+  color: #fff;
+}
+
+.projectcontainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 32px;
+  margin-top: 20px;
+}
+.projectcontainer .project {
+  padding: 12px;
+  line-height: 1;
+  color: #000;
+  background: #fff;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  transition: 0.1s;
+}
+.projectcontainer .project .img {
+  width: 100%;
+}
+.projectcontainer .project .projecttitlecontainer {
+  margin-top: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.projectcontainer .project .projecttitlecontainer .projecttitle a {
+  color: #333;
+  text-decoration: none;
+}
+.projectcontainer .project .projecttitlecontainer .projecttitle:hover {
+  text-decoration: underline;
+}
+.projectcontainer .project .projecttitlecontainer .projecttitle:hover:after {
+  content: "🔗";
+}
+.projectcontainer .project .projecttitlecontainer .projecttitle + a {
+  font-size: 20px;
+  color: rgba(0, 0, 0, 0.3);
+}
+.projectcontainer .project .projecttitlecontainer .projecttitle + a svg {
+  vertical-align: middle;
+  margin-right: 8px;
+}
+.projectcontainer .project .tags {
+  margin-top: 12px;
+}
+.projectcontainer .project .tags .tag {
+  padding: 8px 12px;
+  display: inline-block;
+  margin: 4px;
+  border-radius: 4px;
+  color: #fff;
+  background: #13d6c1;
+}
+.projectcontainer .project:hover {
+  box-shadow: 0 15px 20px rgba(245, 245, 245, 0.2);
+}
+
+.skills .title {
+  color: #000;
+  font-size: 32px;
+}
+.skills .language, .skills .tools {
+  margin-top: 20px;
+}
+.skills .language h2, .skills .tools h2 {
+  font-weight: 400;
+}
+.skills .language .group, .skills .tools .group {
+  margin-top: 20px;
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+.skills .language .group .sec, .skills .tools .group .sec {
+  font-size: 1.2em;
+  padding: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  border: 1px solid #fff;
+  overflow: hidden;
+  position: relative;
+  transition: 0.1s;
+}
+.skills .language .group .sec:hover, .skills .tools .group .sec:hover {
+  border: 1px solid #888;
+  background: rgb(243, 243, 243);
+}
+.skills .language .group .sec:hover svg, .skills .language .group .sec:hover img, .skills .tools .group .sec:hover svg, .skills .tools .group .sec:hover img {
+  right: 30px;
+  fill: #13d6c1;
+  transform: scale(2) translate(0, -60%);
+}
+.skills .language .group .sec:hover .libs .lib, .skills .tools .group .sec:hover .libs .lib {
+  color: rgb(31, 31, 31);
+}
+.skills .language .group .sec svg, .skills .tools .group .sec svg {
+  position: absolute;
+  z-index: 0;
+  width: 30px;
+  top: 50%;
+  right: -4px;
+  fill: #000;
+  opacity: 0.8;
+  transform: translate(0, -50%);
+  transform-origin: center;
+  font-size: 2em;
+  transition: 0.1s;
+}
+.skills .language .group .sec .libs, .skills .tools .group .sec .libs {
+  list-style: none;
+}
+.skills .language .group .sec .libs .lib, .skills .tools .group .sec .libs .lib {
+  color: #888;
+  padding: 2px 14px;
+  font-size: 0.9em;
+  position: relative;
+}
+.skills .language .group .sec .libs .lib::before, .skills .tools .group .sec .libs .lib::before {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 1px;
+  top: 12px;
+  left: 2px;
+  background: rgb(192, 192, 192);
+}
+.skills .language .group .sec .libs .lib::after, .skills .tools .group .sec .libs .lib::after {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 16px;
+  top: -4px;
+  left: 2px;
+  background: rgb(192, 192, 192);
+}
+
+@media screen and (max-width: 800px) {
+  .skills {
+    padding: 40px 20px;
+  }
+}
+.contact {
+  background: #000;
+  color: #fff;
+}
+.contact .contactgrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 40px;
+  z-index: 2;
+}
+.contact .contactgrid .formarea {
+  margin-top: 20px;
+}
+.contact .contactgrid .formarea .form {
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+.contact .contactgrid .formarea .form .formtitle {
+  margin-bottom: 40px;
+}
+.contact .contactgrid .formarea .form .form-group {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+.contact .contactgrid .formarea .form .form-group label {
+  color: #555;
+  font-size: 14px;
+}
+.contact .contactgrid .formarea .form .form-group .text {
+  font-family: "Roboto", sans-serif;
+  padding: 8px 12px;
+  background: rgb(66, 66, 66);
+  border: 2px solid transparent;
+  outline: none;
+  margin-top: 2px;
+  color: #fff;
+  caret-color: #13d6c1;
+  transition: 0.1s;
+}
+.contact .contactgrid .formarea .form .form-group .text:hover, .contact .contactgrid .formarea .form .form-group .text:focus, .contact .contactgrid .formarea .form .form-group .text:active {
+  border: 2px solid #13d6c1;
+  box-shadow: 0 0 5px #13d6c1;
+}
+.contact .contactgrid .formarea .form .form-group .message {
+  padding: 8px 12px;
+  outline: none;
+  background: rgb(66, 66, 66);
+  border: 2px solid rgb(66, 66, 66);
+  color: #fff;
+  resize: none;
+  caret-color: #13d6c1;
+  transition: 0.1s;
+}
+.contact .contactgrid .formarea .form .form-group .message:hover, .contact .contactgrid .formarea .form .form-group .message:focus, .contact .contactgrid .formarea .form .form-group .message:active {
+  box-shadow: 0 0 5px #13d6c1;
+  border: 2px solid #13d6c1;
+}
+.contact .contactgrid .formarea .form .submit {
+  padding: 8px 32px;
+  border: none;
+  background: #13d6c1;
+  color: #fff;
+  letter-spacing: 1px;
+  font-size: 18px;
+  position: relative;
+  top: 0;
+  left: 0;
+  text-transform: uppercase;
+  box-shadow: 0 6px rgba(19, 214, 193, 0.5);
+  transition: 0.12s;
+}
+.contact .contactgrid .formarea .form .submit:hover {
+  top: 3px;
+  left: 0;
+  box-shadow: 0 3px rgba(19, 214, 193, 0.5), 0 5px 10px rgba(19, 214, 193, 0.5);
+}
+.contact .contactgrid .formarea .form .submit:active {
+  top: 6px;
+  box-shadow: 0 0 rgba(19, 214, 193, 0.5), 0 5px 10px rgba(19, 214, 193, 0.5);
+}
+.contact .contactgrid .details {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+.contact .contactgrid .details h2 {
+  margin-bottom: 20px;
+}
+.contact .contactgrid .details a {
+  text-decoration: none;
+  color: #fff;
+  display: block;
+}
+.contact .contactgrid .details a svg {
+  color: #13d6c1;
+}
+.contact .contactgrid .details .jdk {
+  margin-top: 40px;
+  width: 120px;
+}
+
+.footer {
+  padding: 20px 0;
+  text-align: center;
+  background: #13d6c1;
+  color: #fff;
+  letter-spacing: 2px;
+  cursor: default;
+}
+.footer svg {
+  vertical-align: middle;
+}
+
+@media screen and (max-width: 1000px) {
+  .contact .contactgrid {
+    width: 80%;
+    grid-template-columns: 1fr;
+  }
+  .contact .contactgrid .formarea .form {
+    padding: 40px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .contact .contactgrid {
+    width: 100%;
+  }
+  .contact .contactgrid .formarea .form {
+    padding: 20px;
+    box-shadow: none;
+    border-radius: 0;
+  }
+  .contact .contactgrid .details .jdk {
+    display: none;
+  }
+}
+.scrolldown {
+  opacity: 0;
+  pointer-events: none;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #13d6c1;
+  color: #000;
+  border: 2px solid #000;
+  z-index: 5;
+  transition: 0.2s;
+}
+.scrolldown:hover {
+  background: #000;
+  color: #13d6c1;
+  border: 2px solid #fff;
+}/*# sourceMappingURL=main.css.map */

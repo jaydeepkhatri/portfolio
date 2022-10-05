@@ -1,0 +1,145 @@
+.contact {
+    background: $black;
+    color: $white;
+    .contactgrid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 40px;
+        z-index: 2;
+        .formarea {
+            margin-top: 20px;
+            .form {
+                border-radius: 20px;
+                box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+                .formtitle {
+                    margin-bottom: 40px;
+                }
+                .form-group {
+                    display: flex;
+                    justify-content: center;
+                    flex-direction: column;
+                    margin-bottom: 20px;
+                    label {
+                        color: #555;
+                        font-size: 14px;
+                    }
+                    .text {
+                        font-family: 'Roboto', sans-serif;
+                        padding: 8px 12px;
+                        background: rgb(66, 66, 66);
+                        border: 2px solid transparent;
+                        outline: none;
+                        margin-top: 2px;
+                        color: $white;
+                        caret-color: $theme;
+                        transition: 0.1s;
+                        &:hover, &:focus, &:active {
+                            border: 2px solid $theme;
+                            box-shadow: 0 0 5px $theme;
+                        }
+
+                    }
+                    .message {
+                        padding: 8px 12px;
+                        outline: none;
+                        background: rgb(66, 66, 66);
+                        border: 2px solid rgb(66, 66, 66);
+                        color: $white;
+                        resize: none;
+                        caret-color: $theme;
+                        transition: 0.1s;
+                        &:hover, &:focus, &:active {
+                            box-shadow: 0 0 5px $theme;
+                            border: 2px solid $theme;
+                        }
+                    }
+                }
+                .submit {
+                    padding: 8px 32px;
+                    border: none;
+                    background: $theme;
+                    color: $white;
+                    letter-spacing: 1px;
+                    font-size: 18px;
+                    position: relative;
+                    top: 0;
+                    left: 0;
+                    text-transform: uppercase;
+                    box-shadow: 0 6px rgba($theme, 0.5);
+                    transition: 0.12s;
+                    &:hover {
+                        top: 3px;
+                        left: 0;
+                        box-shadow: 0 3px rgba($theme, 0.5), 0 5px 10px rgba($theme, 0.5);
+                    }
+                    &:active {
+                        top: 6px;
+                        box-shadow: 0 0 rgba($theme, 0.5), 0 5px 10px rgba($theme, 0.5);
+                    }
+                }
+            }
+        }
+        .details {
+            display: flex;
+            flex-direction: column;
+            @include padding(2.5);
+            h2 {
+                margin-bottom: 20px;
+            }
+            a {
+                text-decoration: none;
+                color: $white;
+                display: block;
+                
+                svg {
+                    color: $theme;
+                }
+            }
+            .jdk {
+                margin-top: 40px;
+                width: 120px;
+            }
+        }
+    }
+}
+.footer {
+    padding: 20px 0;
+    text-align: center;
+    background: $theme;
+    color: $white;
+    letter-spacing: 2px;
+    cursor: default;
+    svg {
+        vertical-align: middle;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .contact {
+        .contactgrid {
+            width: 80%;
+            grid-template-columns: 1fr;
+            .formarea .form {
+                padding: 40px;
+            }
+        }
+    }
+} 
+
+@media screen and (max-width: 600px) {
+    .contact {
+        .contactgrid {
+            width: 100%;
+            .formarea {
+                .form {
+                    @include padding(2.5);
+                    box-shadow: none;
+                    border-radius: 0;
+                }
+            }
+            .details .jdk {
+                display: none;
+            }
+        }
+    }
+}
