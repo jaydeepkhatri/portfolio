@@ -72,17 +72,9 @@ const Projects = () => {
     ];
     
     return (
-        <section className="projects" style={{
-            backgroundImage: `linear-gradient(0deg, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("${image}")`,
-            //background: "#000",
-            padding: "40px 0",
-            backgroundAttachment: "fixed",
-            backgroundPosition: "center",
-            backgroundRepeat: "no-repeat",
-            backgroundSize: "cover"
-        }}>
+        <section className="projects">
             <div className="section">
-                <h1 className="title" data-text="My Projects">My Projects 🖥️</h1>
+                <h1 className="title" data-text="My Projects">My Projects</h1>
                 <div className="projectcontainer">
                     {
                         projectdata.map((project, i) => {

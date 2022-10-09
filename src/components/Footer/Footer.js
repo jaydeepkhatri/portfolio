@@ -10,7 +10,7 @@ const Footer = () => {
                 <div className="section">
                 <div className="contactgrid">
                     <div className="formarea">
-                        <form className="form" name="contact" action="/contact" method="POST" required>
+                        <form className="form" name="contact" method="POST" data-netlify="true">
                             <input type="hidden" name="form-name" value="contact" />
                             <h2 className="formtitle"><span className="title">Say Hello! 👋</span></h2>
                             <div className="form-group" data-aos="fade-up">
@@ -31,9 +31,9 @@ const Footer = () => {
                     <div className="details">
                         <div>
                             <h2>Email</h2>
-                            <a href="mailto:jaydeepkhatri79@gmail.com" data-aos="fade-up"><FiMail /> jaydeepkhatri79@gmail.com</a>
+                            <a href="mailto:hello@jaydeepkhatri.me" data-aos="fade-up"><FiMail /> hello@jaydeepkhatri.me</a>
                         </div>
-                        <img src={jdk} className="jdk" alt="JDK" title="JD" />
+                        <img src={jdk} className="jdk" alt="JD K" />
                     </div>
                 </div>
                 </div>

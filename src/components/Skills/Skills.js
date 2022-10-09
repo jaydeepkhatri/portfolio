@@ -2,8 +2,6 @@ import {SiPhp, SiHtml5, SiCss3, SiJavascript, SiFirebase, SiGoogleanalytics, SiM
 import {CgFigma} from "react-icons/cg";
 import {AiOutlineAreaChart} from "react-icons/ai";
 
-
-
 const Skills = () => {
     const tools = [
         {
@@ -29,17 +27,17 @@ const Skills = () => {
     ];
     return (
         <section className="section skills">
-            <h1 className="title">Skills ⚒️</h1>
+            <h1 className="title" data-text="Skills">Skills</h1>
             <div className="language">
                 <h2><span className="title">Languages</span></h2>
                 <div className="group">
-                    <div className="sec html" data-aos="fade-up">HTML5
+                    <div className="sec html" data-aos="fade-up" data-aos-delay="50">HTML5
                         <SiHtml5 />
                         <ul className="libs">
                             <li className="lib">Markdown</li>
                         </ul>
                     </div>
-                    <div className="sec css" data-aos="fade-up">CSS3
+                    <div className="sec css" data-aos="fade-up" data-aos-delay="100">CSS3
                         <SiCss3 />
                         <ul className="libs">
                             <li className="lib">Bootstrap</li>
@@ -50,7 +48,7 @@ const Skills = () => {
                                 </ul>
                             </li>
                         </ul></div>
-                    <div className="sec js" data-aos="fade-up">JavaScript
+                    <div className="sec js" data-aos="fade-up" data-aos-delay="150">JavaScript
                         <SiJavascript />
                         <ul className="libs">
                             <li className="lib">React</li>
@@ -59,10 +57,10 @@ const Skills = () => {
                             <li className="lib">Socket.io</li>
                         </ul>
                     </div>
-                    <div className="sec php" data-aos="fade-up">PHP
+                    <div className="sec php" data-aos="fade-up" data-aos-delay="200">PHP
                         <SiPhp />
                     </div>
-                    <div className="sec sql" data-aos="fade-up">SQL
+                    <div className="sec sql" data-aos="fade-up" data-aos-delay="250">SQL
                         <SiMysql />
                     </div>
 
@@ -72,7 +70,7 @@ const Skills = () => {
                 <h2><span className="title">Tools & Services</span></h2>
                 <div className="group">
                     {tools.map((tool, i) => {
-                        return <div className={tool.classn + " sec"} key={i} data-aos="fade-up" data-aos-delay={50 * (i + 1)}>
+                        return <div className={tool.name + " sec"} key={i} data-aos="fade-up" data-aos-delay={50 * (i + 1)}>
                                 {tool.name} <tool.icon />
                             </div>
                     })}

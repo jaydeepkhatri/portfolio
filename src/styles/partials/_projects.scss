@@ -1,13 +1,13 @@
 .projects {
     position: relative;
+    padding: 40px 0;
 }
 
 
 .projectcontainer {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     grid-gap: 32px;
-    margin-top: 20px;
     .project {
         @include padding(1.5);
         line-height: 1;
@@ -56,7 +56,7 @@
             }
         }
         &:hover {
-            box-shadow: 0 15px 20px rgba(245, 245, 245, 0.2);
+            box-shadow: 0 15px 20px rgb(47, 47, 47);
         }
     }
 }

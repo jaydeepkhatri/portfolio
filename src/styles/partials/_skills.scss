@@ -1,12 +1,9 @@
 .skills {
-    .title {
-        color: $black;
-        @include fontsize(4);
-    }
     .language, .tools {
         margin-top: 20px;
         h2 {
             font-weight: 400;
+            margin-top: 40px;
         }
         .group {
             margin-top: 20px;
@@ -22,26 +19,27 @@
                 position: relative;
                 transition: 0.1s;
                 &:hover {
-                    border: 1px solid #888;
-                    background: rgb(243, 243, 243);
+                    border: 1px solid $theme;
+                    background: #1f252e;
                     svg, img {
                         right: 30px;
-                        // opacity: 0.6;
+                        opacity: 1;
                         fill: $theme;
-                        transform: scale(2) translate(0, -60%);
+                        stroke: $theme;
+                        transform: scale(2) translate(0, -90%);
                     }
                     .libs .lib{ 
-                        color: rgb(31, 31, 31);
+                        color: rgb(220, 220, 220);
                     }
                 }
                 svg {
                     position: absolute;
                     z-index: 0;
                     width: 30px;
-                    top: 50%;
+                    top: 100px;
                     right: -4px;
                     fill: #000;
-                    opacity: 0.8;
+                    opacity: 0;
                     transform: translate(0, -50%);
                     transform-origin: center;
                     font-size: 2em;
@@ -55,6 +53,7 @@
                         padding: 2px 14px;
                         font-size: 0.9em;
                         position: relative;
+                        transition: 0.1s;
                         &::before {
                             content: '';
                             position: absolute;
