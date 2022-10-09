@@ -1,5 +1,4 @@
 import {FaGithub} from "react-icons/fa";
-import image from "../../assets/img/projects.jpg";
 import findbank from "../../assets/img/findbank.png"
 import vartalap from "../../assets/img/vartalap.png";
 import minifier from "../../assets/img/minifier.png";
@@ -81,7 +80,7 @@ const Projects = () => {
                             return <div className="project" key={i}>
                                 <img src={project.img} className="img" alt={project.alt} />
                                 <div className="projecttitlecontainer">
-                                    <h3 className="projecttitle"><a href={project.url} target="_blank" title={`Visit ${project.title} site`}>{project.title}</a></h3>
+                                    <h3 className="projecttitle"><a href={project.url} target="_blank" rel="noreferrer" title={`Visit ${project.title} site`}>{project.title}</a></h3>
                                     <a href={project.github} title={`Source code for ${project.title}`}><FaGithub /></a>
                                 </div>
                                 <p className="description">{project.desc}</p>
