@@ -47,17 +47,24 @@ body {
 .title {
   position: relative;
   text-align: center;
+  text-transform: uppercase;
   font-size: 24px;
+  margin-bottom: 60px;
 }
 .title::after {
   content: attr(data-text);
   position: absolute;
-  bottom: -40px;
-  font-size: 32px;
+  font-size: 96px;
+  color: #fff;
+  bottom: 0px;
+  top: -40px;
   left: 0;
-  color: #000;
-  opacity: 0.3;
   right: 0;
+  opacity: 0.2;
+  transition: 0.1s;
+}
+.title:hover::after {
+  color: #13d6c1;
 }
 
 ::-moz-selection {
@@ -225,7 +232,6 @@ body {
 }
 #view .foralignment .desc {
   padding: 20px;
-  position: relative;
 }
 #view .foralignment .desc p {
   font-size: 17.6px;
@@ -233,19 +239,21 @@ body {
   line-height: 1.5;
   opacity: 0.9;
   letter-spacing: 0.5px;
+  position: relative;
+}
+#view .foralignment .desc p::before {
+  content: open-quote;
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  color: #13d6c1;
+  font-size: 64px;
+  opacity: 0.4;
+  line-height: 1;
 }
 #view .foralignment .desc p span {
   color: #13d6c1;
   font-weight: 700;
-}
-#view .foralignment .desc::before {
-  content: open-quote;
-  position: absolute;
-  top: 0;
-  left: 0;
-  color: #13d6c1;
-  font-size: 32px;
-  opacity: 0.4;
 }
 
 @media screen and (max-width: 992px) {
@@ -267,11 +275,6 @@ body {
 }
 .projects {
   position: relative;
-}
-.projects .title {
-  text-align: center;
-  margin-bottom: 32px;
-  color: #fff;
 }
 
 .projectcontainer {

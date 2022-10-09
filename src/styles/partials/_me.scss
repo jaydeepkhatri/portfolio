@@ -19,29 +19,30 @@
             }
         }
         .desc {
-            
             padding: 20px;
-            position: relative;
             p {
                 @include fontsize(2.2);
                 color: $white;
                 line-height: 1.5;
                 opacity: 0.9;
                 letter-spacing: 0.5px;
+                position: relative;
+                &::before {
+                    content: open-quote;
+                    position: absolute;
+                    top: -20px;
+                    left: -20px;
+                    color: $theme;
+                    @include fontsize(8);
+                    opacity: 0.4;
+                    line-height: 1;
+                }
                 span {
                     color: $theme;
                     font-weight: 700;
                 }
             }
-            &::before {
-                content: open-quote;
-                position: absolute;
-                top: 0;
-                left: 0;
-                color: $theme;
-                @include fontsize(4);
-                opacity: 0.4;
-            }
+            
         }
     }
 }
