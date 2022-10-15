@@ -1,62 +1,61 @@
 .projects {
     position: relative;
-    padding: 40px 0;
-}
-
-
-.projectcontainer {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    grid-gap: 32px;
-    .project {
-        @include padding(1.5);
-        line-height: 1;
-        color: $black;
-        background: $white;
-        box-shadow: 0 10px 20px rgba(0,0,0,0.15);
-        transition: 0.1s;
-        .img {
-            width: 100%;
-        }
-        .projecttitlecontainer {
-            margin-top: 12px;
-            @include flexaligncenter;
-            justify-content: space-between;
-            .projecttitle {
-                a {
-                    color: #333;
-                    text-decoration: none;
+    .projectcontainer {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        grid-gap: 32px;
+        width: 100%;
+        .project {
+            @include padding(1.5);
+            line-height: 1;
+            color: $white;
+            border: 1px solid $white;
+            position: relative;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+            transition: 0.15s;
+            .img {
+                width: 100%;
+            }
+            .projecttitlecontainer {
+                margin-top: 12px;
+                @include flexaligncenter;
+                justify-content: space-between;
+                .projecttitle {
+                    a {
+                        color: $white;
+                        font-weight: 400;
+                        text-decoration: none;
+                    }
                 }
-                &:hover {
-                    text-decoration: underline;
-                    &:after {
-                        content: "🔗";
+                .projecttitle+a {
+                    @include fontsize(2.5);
+                    color: $white;
+                    svg {
+                        vertical-align: middle;
+                        margin-right: 8px;
                     }
                 }
             }
-            .projecttitle+a {
-                @include fontsize(2.5);
-                color: rgba(0,0,0,0.3);
-                svg {
-                    vertical-align: middle;
-                    margin-right: 8px;
+            
+            .tags {
+                margin-top:12px;
+                .tag {
+                    padding: 8px 12px;
+                    display: inline-block;
+                    margin: 4px;
+                    @include fontsize(1.5);
+                    font-weight: 900;
+                    text-transform: uppercase;
+                    border-radius: 4px;
+                    color: $black;
+                    background: $theme;
                 }
             }
-        }
-        
-        .tags {
-            margin-top:12px;
-            .tag {
-                padding: 8px 12px;
-                display: inline-block;
-                margin: 4px;
-                border-radius: 4px;
-                color: #fff;
-                background: $theme;
+            &:hover {
+                box-shadow: 0 0 20px $theme;  
             }
-        }
-        &:hover {
-            box-shadow: 0 15px 20px rgb(47, 47, 47);
         }
     }
 }
+
+

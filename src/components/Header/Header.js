@@ -17,10 +17,9 @@ const Header = () => {
         }
     ];
     return (
-        <header className="header">
+        <header className="header section">
             <h1 data-aos="fade-up">Jaydeep Khatri</h1>
             <p className="subtitle">Frontend Developer</p>
-            <span className="bottomarrow" onClick={() => document.querySelector("#view").scrollIntoView()}>&#x2193;</span>
             <ul className="social">
                 {social.map((soc, i) => {
                     return <li className="sociallink" key={i} data-aos="fade-up" data-aos-delay={50 * (i + 1)}><a href={soc.link} target="_blank" rel="noopener noreferrer"><soc.icon /></a></li>

@@ -1,7 +1,7 @@
 $black: #000;
 $white: #fff;
 $theme: #13d6c1;
-$text: rgb(0, 141, 223);
+//$text: rgb(0, 141, 223);
 
 * {
     margin: 0;
@@ -33,10 +33,26 @@ body {
     align-items: center;
 }
 
+.App {
+    scroll-snap-type: y mandatory;
+    overflow-y: auto;
+    height: 100vh;
+}
+
 .section {
     max-width: 1400px;
     margin: 0 auto;
     padding: 80px;
+    min-height: 100vh;
+    scroll-snap-align: start;
+    scroll-snap-stop: normal;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .foralignment {
+        margin: auto;
+    }
+    // @include flexaligncenter;
 }
 .btn {
     display: inline-block;

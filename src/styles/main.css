@@ -1,4 +1,3 @@
-@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -18,10 +17,26 @@ body {
   color: #fff;
 }
 
+.App {
+  -ms-scroll-snap-type: y mandatory;
+      scroll-snap-type: y mandatory;
+  overflow-y: auto;
+  height: 100vh;
+}
+
 .section {
   max-width: 1400px;
   margin: 0 auto;
   padding: 80px;
+  min-height: 100vh;
+  scroll-snap-align: start;
+  scroll-snap-stop: normal;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.section .foralignment {
+  margin: auto;
 }
 
 .btn {
@@ -92,7 +107,7 @@ body {
   pointer-events: none;
   background: transparent;
   opacity: 1;
-  transition: 100ms;
+  transition: 50ms;
 }
 .cursor::after {
   content: "";
@@ -107,7 +122,6 @@ body {
 }
 
 .header {
-  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -147,29 +161,6 @@ body {
 }
 .header .social .sociallink a:hover {
   color: #000;
-}
-.header .bottomarrow {
-  cursor: pointer;
-  position: absolute;
-  bottom: 80px;
-  right: 50%;
-  transform: translateX(50%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
-  color: #fff;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-  border-radius: 50%;
-  border: 2px solid rgba(255, 255, 255, 0.5);
-  transition: 0.1s;
-}
-.header .bottomarrow:hover {
-  border: 2px solid #fff;
 }
 
 @media screen and (max-width: 1000px) {
@@ -279,62 +270,60 @@ body {
 }
 .projects {
   position: relative;
-  padding: 40px 0;
 }
-
-.projectcontainer {
+.projects .projectcontainer {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   grid-gap: 32px;
-}
-.projectcontainer .project {
-  padding: 12px;
-  line-height: 1;
-  color: #000;
-  background: #fff;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-  transition: 0.1s;
-}
-.projectcontainer .project .img {
   width: 100%;
 }
-.projectcontainer .project .projecttitlecontainer {
+.projects .projectcontainer .project {
+  padding: 12px;
+  line-height: 1;
+  color: #fff;
+  border: 1px solid #fff;
+  position: relative;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  transition: 0.15s;
+}
+.projects .projectcontainer .project .img {
+  width: 100%;
+}
+.projects .projectcontainer .project .projecttitlecontainer {
   margin-top: 12px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.projectcontainer .project .projecttitlecontainer .projecttitle a {
-  color: #333;
+.projects .projectcontainer .project .projecttitlecontainer .projecttitle a {
+  color: #fff;
+  font-weight: 400;
   text-decoration: none;
 }
-.projectcontainer .project .projecttitlecontainer .projecttitle:hover {
-  text-decoration: underline;
-}
-.projectcontainer .project .projecttitlecontainer .projecttitle:hover:after {
-  content: "🔗";
-}
-.projectcontainer .project .projecttitlecontainer .projecttitle + a {
+.projects .projectcontainer .project .projecttitlecontainer .projecttitle + a {
   font-size: 20px;
-  color: rgba(0, 0, 0, 0.3);
+  color: #fff;
 }
-.projectcontainer .project .projecttitlecontainer .projecttitle + a svg {
+.projects .projectcontainer .project .projecttitlecontainer .projecttitle + a svg {
   vertical-align: middle;
   margin-right: 8px;
 }
-.projectcontainer .project .tags {
+.projects .projectcontainer .project .tags {
   margin-top: 12px;
 }
-.projectcontainer .project .tags .tag {
+.projects .projectcontainer .project .tags .tag {
   padding: 8px 12px;
   display: inline-block;
   margin: 4px;
+  font-size: 12px;
+  font-weight: 900;
+  text-transform: uppercase;
   border-radius: 4px;
-  color: #fff;
+  color: #000;
   background: #13d6c1;
 }
-.projectcontainer .project:hover {
-  box-shadow: 0 15px 20px rgb(47, 47, 47);
+.projects .projectcontainer .project:hover {
+  box-shadow: 0 0 20px #13d6c1;
 }
 
 .skills .language, .skills .tools {

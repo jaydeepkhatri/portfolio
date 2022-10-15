@@ -46,7 +46,7 @@ const Projects = () => {
             desc: "",
             url: "https://mynotes-react.herokuapp.com/",
             github: "https://github.com/jaydeepkhatri/MyNotes",
-            tags: ["React", "SCSS", "Material UI"]
+            tags: ["React", "Material UI"]
         },
         {
             id: "5",
@@ -63,7 +63,7 @@ const Projects = () => {
             img: minifier,
             alt: "Minifier",
             title: "Minifier",
-            desc: "",
+            desc: "asasa",
             url: "https://jaydeepkhatri.github.io/Minifier/",
             github: "https://github.com/jaydeepkhatri/Minifier",
             tags: ["JS"]
@@ -71,13 +71,12 @@ const Projects = () => {
     ];
     
     return (
-        <section className="projects">
-            <div className="section">
+        <section className="section projects">
                 <h1 className="title" data-text="My Projects">My Projects</h1>
                 <div className="projectcontainer">
                     {
                         projectdata.map((project, i) => {
-                            return <div className="project" key={i}>
+                            return <a href={project.url} target="_blank" className="project" key={i}>
                                 <img src={project.img} className="img" alt={project.alt} />
                                 <div className="projecttitlecontainer">
                                     <h3 className="projecttitle"><a href={project.url} target="_blank" rel="noreferrer" title={`Visit ${project.title} site`}>{project.title}</a></h3>
@@ -91,12 +90,10 @@ const Projects = () => {
                                         })
                                     }
                                 </div>
-                            </div>
+                            </a>
                         })
                     }
                 </div>
-            </div>
-            
         </section>
         
     )

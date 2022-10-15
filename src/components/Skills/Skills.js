@@ -1,6 +1,7 @@
-import {SiPhp, SiHtml5, SiCss3, SiJavascript, SiFirebase, SiGoogleanalytics, SiMysql, SiAdobexd} from "react-icons/si";
-import {CgFigma} from "react-icons/cg";
-import {AiOutlineAreaChart} from "react-icons/ai";
+import { SiHtml5, SiCss3, SiJavascript, SiFirebase, SiGoogleanalytics, SiMysql, SiAdobexd } from "react-icons/si";
+import { CgFigma } from "react-icons/cg";
+import { FaNodeJs, FaReact } from "react-icons/fa";
+import { AiOutlineAreaChart } from "react-icons/ai";
 
 const Skills = () => {
     const tools = [
@@ -19,10 +20,6 @@ const Skills = () => {
         {
             name: "Google Analytics",
             icon: SiGoogleanalytics
-        },
-        {
-            name: "PhpMyAdmin",
-            icon: SiPhp
         }
     ];
     return (
@@ -31,38 +28,39 @@ const Skills = () => {
             <div className="language">
                 <h2><span className="title">Languages</span></h2>
                 <div className="group">
-                    <div className="sec html" data-aos="fade-up" data-aos-delay="50">HTML5
+                    <div className="sec html">HTML5
                         <SiHtml5 />
                         <ul className="libs">
                             <li className="lib">Markdown</li>
                         </ul>
                     </div>
-                    <div className="sec css" data-aos="fade-up" data-aos-delay="100">CSS3
+                    <div className="sec css">CSS3
                         <SiCss3 />
                         <ul className="libs">
                             <li className="lib">Bootstrap</li>
-                            <li className="lib">Materialize</li>
+                            <li className="lib">Material</li>
                             <li className="lib">Preprocessor
                                 <ul className="libs">
                                     <li className="lib">SCSS</li>
                                 </ul>
                             </li>
                         </ul></div>
-                    <div className="sec js" data-aos="fade-up" data-aos-delay="150">JavaScript
+                    <div className="sec js">JavaScript
                         <SiJavascript />
                         <ul className="libs">
-                            <li className="lib">React</li>
+                            <li className="lib">DOM</li>
                             <li className="lib">jQuery</li>
                             <li className="lib">NPM</li>
                             <li className="lib">Socket.io</li>
                         </ul>
                     </div>
-                    <div className="sec php" data-aos="fade-up" data-aos-delay="200">PHP
-                        <SiPhp />
+                    <div className="sec sql">React.js
+                        <FaReact />
                     </div>
-                    <div className="sec sql" data-aos="fade-up" data-aos-delay="250">SQL
-                        <SiMysql />
+                    <div className="sec php">NodeJs
+                        <FaNodeJs />
                     </div>
+                    
 
                 </div>
             </div>
@@ -70,11 +68,11 @@ const Skills = () => {
                 <h2><span className="title">Tools & Services</span></h2>
                 <div className="group">
                     {tools.map((tool, i) => {
-                        return <div className={tool.name + " sec"} key={i} data-aos="fade-up" data-aos-delay={50 * (i + 1)}>
+                        return <div className={tool.name + " sec"} key={i}>
                                 {tool.name} <tool.icon />
                             </div>
                     })}
-                    <ul className="sec seo" data-aos="fade-up" data-aos-delay="300">
+                    <ul className="sec seo">
                     SEO <AiOutlineAreaChart />
                         <ul className="libs">
                                 <li className="lib">Schema</li>
