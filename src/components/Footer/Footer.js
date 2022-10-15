@@ -25,7 +25,7 @@ const Footer = () => {
                                 <label forhtml="message">Message</label>
                                 <textarea className="message" rows="4" name="message" placeholder="Your Message" required></textarea>
                             </div>
-                            <input type="submit" value="Send" className="submit" />
+                            <input type="submit" value="Send" className="btn" />
                         </form>
                     </div>
                     <div className="details">

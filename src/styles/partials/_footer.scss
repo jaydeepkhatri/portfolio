@@ -1,5 +1,4 @@
 .contact {
-    background: $black;
     color: $white;
     .contactgrid {
         display: grid;
@@ -7,10 +6,8 @@
         grid-gap: 40px;
         z-index: 2;
         .formarea {
-            margin-top: 20px;
             .form {
                 border-radius: 20px;
-                box-shadow: 0 10px 20px rgba(0,0,0,0.15);
                 .formtitle {
                     margin-bottom: 40px;
                 }
@@ -54,35 +51,11 @@
                         }
                     }
                 }
-                .submit {
-                    padding: 8px 32px;
-                    border: none;
-                    background: $theme;
-                    color: $white;
-                    letter-spacing: 1px;
-                    font-size: 18px;
-                    position: relative;
-                    top: 0;
-                    left: 0;
-                    text-transform: uppercase;
-                    box-shadow: 0 6px rgba($theme, 0.5);
-                    transition: 0.12s;
-                    &:hover {
-                        top: 3px;
-                        left: 0;
-                        box-shadow: 0 3px rgba($theme, 0.5), 0 5px 10px rgba($theme, 0.5);
-                    }
-                    &:active {
-                        top: 6px;
-                        box-shadow: 0 0 rgba($theme, 0.5), 0 5px 10px rgba($theme, 0.5);
-                    }
-                }
             }
         }
         .details {
             display: flex;
             flex-direction: column;
-            @include padding(2.5);
             h2 {
                 margin-bottom: 20px;
             }
@@ -115,14 +88,8 @@
 }
 
 @media screen and (max-width: 1000px) {
-    .contact {
-        .contactgrid {
-            width: 80%;
-            grid-template-columns: 1fr;
-            .formarea .form {
-                padding: 40px;
-            }
-        }
+    .contact .contactgrid {
+        grid-template-columns: 1fr;
     }
 } 
 
@@ -132,7 +99,6 @@
             width: 100%;
             .formarea {
                 .form {
-                    @include padding(2.5);
                     box-shadow: none;
                     border-radius: 0;
                 }

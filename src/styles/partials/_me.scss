@@ -1,6 +1,5 @@
 #view {
     padding:120px 0;
-    background: $black;
     max-width: 100%;
     .foralignment {
         max-width:  1400px;
@@ -42,7 +41,9 @@
                     font-weight: 700;
                 }
             }
-            
+        }
+        .btn {
+            margin-top: 40px;
         }
     }
 }

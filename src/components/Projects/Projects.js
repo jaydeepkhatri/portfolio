@@ -63,7 +63,7 @@ const Projects = () => {
             img: minifier,
             alt: "Minifier",
             title: "Minifier",
-            desc: "asasa",
+            desc: "",
             url: "https://jaydeepkhatri.github.io/Minifier/",
             github: "https://github.com/jaydeepkhatri/Minifier",
             tags: ["JS"]

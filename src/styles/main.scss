@@ -1,7 +1,6 @@
 $black: #000;
 $white: #fff;
 $theme: #13d6c1;
-//$text: rgb(0, 141, 223);
 
 * {
     margin: 0;
@@ -13,7 +12,7 @@ html {
 }
 body {
     font-family: 'Inter', sans-serif;
-    overflow-x: hidden;
+    overflow: hidden;
     max-width: 1920px;
     margin: 0 auto;
     background: linear-gradient(to right, #191c1f, #151b25, #191c1f);
@@ -44,25 +43,32 @@ body {
     margin: 0 auto;
     padding: 80px;
     min-height: 100vh;
-    scroll-snap-align: start;
+    @supports (scroll-snap-align: start) {
+        scroll-snap-align: start;
+    }
     scroll-snap-stop: normal;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    .foralignment {
-        margin: auto;
-    }
-    // @include flexaligncenter;
 }
+@media screen and (max-width: 600px) {
+    .App {
+        scroll-snap-type: none;
+    }
+    .section {
+        padding: 20px;
+    }
+}
+
 .btn {
     display: inline-block;
-    margin-top: 40px;
     font-size: 0.9em;
     padding: 12px 32px;
     background: $theme;
     text-transform: uppercase;
     font-weight: 700;
     color: rgba($black, 0.9);
+    cursor: pointer;
     text-decoration: none;
     transition: 0.1s;
     &:hover {
