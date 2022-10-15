@@ -1,4 +1,4 @@
-import { SiHtml5, SiCss3, SiJavascript, SiFirebase, SiGoogleanalytics, SiMysql, SiAdobexd } from "react-icons/si";
+import { SiHtml5, SiCss3, SiJavascript, SiFirebase, SiGoogleanalytics, SiAdobexd } from "react-icons/si";
 import { CgFigma } from "react-icons/cg";
 import { FaNodeJs, FaReact } from "react-icons/fa";
 import { AiOutlineAreaChart } from "react-icons/ai";

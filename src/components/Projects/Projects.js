@@ -76,7 +76,7 @@ const Projects = () => {
                 <div className="projectcontainer">
                     {
                         projectdata.map((project, i) => {
-                            return <a href={project.url} target="_blank" className="project" key={i}>
+                            return <a href={project.url} target="_blank" rel="noreferrer" className="project" key={i}>
                                 <img src={project.img} className="img" alt={project.alt} />
                                 <div className="projecttitlecontainer">
                                     <h3 className="projecttitle"><a href={project.url} target="_blank" rel="noreferrer" title={`Visit ${project.title} site`}>{project.title}</a></h3>
