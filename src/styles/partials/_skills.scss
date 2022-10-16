@@ -7,8 +7,10 @@
         .group {
             margin-top: 20px;
             display: grid;
-            grid-gap: 20px;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-gap: 25px;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            width: 100%;
+            max-width: 1400px;
             .sec {
                 font-size: 1.2em;
                 padding: 20px;

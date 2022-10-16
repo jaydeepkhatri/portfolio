@@ -39,8 +39,6 @@ body {
 }
 
 .section {
-    max-width: 1400px;
-    margin: 0 auto;
     padding: 80px;
     min-height: 100vh;
     @supports (scroll-snap-align: start) {
@@ -50,7 +48,15 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    .container {
+        max-width: 1400px;
+        margin: 0 auto;
+    }
+    &:nth-child(odd) {
+        background: $black;
+    }
 }
+
 @media screen and (max-width: 600px) {
     .App {
         scroll-snap-type: none;

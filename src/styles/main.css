@@ -25,8 +25,6 @@ body {
 }
 
 .section {
-  max-width: 1400px;
-  margin: 0 auto;
   padding: 80px;
   min-height: 100vh;
   scroll-snap-stop: normal;
@@ -38,6 +36,13 @@ body {
   .section {
     scroll-snap-align: start;
   }
+}
+.section .container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+.section:nth-child(odd) {
+  background: #000;
 }
 
 @media screen and (max-width: 600px) {
@@ -175,7 +180,7 @@ body {
   vertical-align: middle;
 }
 .header .social .sociallink a:hover {
-  color: #000;
+  color: #fff;
 }
 
 @media screen and (max-width: 1000px) {
@@ -222,8 +227,7 @@ body {
   padding: 120px 0;
   max-width: 100%;
 }
-#view .foralignment {
-  max-width: 1400px;
+#view .container {
   margin: auto;
   display: grid;
   grid-gap: 20px;
@@ -231,18 +235,18 @@ body {
   grid-template-columns: 1fr 2fr;
   place-items: center;
 }
-#view .foralignment .pic {
+#view .container .pic {
   position: relative;
 }
-#view .foralignment .pic img {
+#view .container .pic img {
   width: 250px;
   height: 250px;
   border-radius: 50%;
 }
-#view .foralignment .desc {
+#view .container .desc {
   padding: 20px;
 }
-#view .foralignment .desc p {
+#view .container .desc p {
   font-size: 17.6px;
   color: #fff;
   line-height: 1.5;
@@ -250,7 +254,7 @@ body {
   letter-spacing: 0.5px;
   position: relative;
 }
-#view .foralignment .desc p::before {
+#view .container .desc p::before {
   content: open-quote;
   position: absolute;
   top: -20px;
@@ -260,11 +264,11 @@ body {
   opacity: 0.4;
   line-height: 1;
 }
-#view .foralignment .desc p span {
+#view .container .desc p span {
   color: #13d6c1;
   font-weight: 700;
 }
-#view .foralignment .btn {
+#view .container .btn {
   margin-top: 40px;
 }
 
@@ -292,6 +296,7 @@ body {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   grid-gap: 32px;
+  max-width: 1400px;
   width: 100%;
 }
 .projects .projectcontainer .project {
@@ -352,8 +357,10 @@ body {
 .skills .language .group, .skills .tools .group {
   margin-top: 20px;
   display: grid;
-  grid-gap: 20px;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 25px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  width: 100%;
+  max-width: 1400px;
 }
 .skills .language .group .sec, .skills .tools .group .sec {
   font-size: 1.2em;
@@ -433,6 +440,7 @@ body {
   grid-template-columns: 1fr 1fr;
   grid-gap: 40px;
   z-index: 2;
+  width: 100%;
 }
 .contact .contactgrid .formarea .form {
   border-radius: 20px;

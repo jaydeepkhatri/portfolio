@@ -6,9 +6,11 @@ import { AiOutlineDownload } from 'react-icons/ai';
 
 const Me = () => {
     
+
+
     return (
         <section className="section" id="view">
-            <div className="foralignment">
+            <div className="container">
                 <div className="pic">
                     <img src={profile} alt="Jaydeep Khatri | Profile" />
                 </div>

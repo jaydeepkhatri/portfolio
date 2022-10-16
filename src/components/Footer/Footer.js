@@ -6,9 +6,8 @@ import jdk from '../../assets/img/jdk.svg';
 const Footer = () => {
     return (
         <>
-            <footer className="contact">
-                <div className="section">
-                <div className="contactgrid">
+            <footer className="section contact">
+                <div className="contactgrid container">
                     <div className="formarea">
                         <form className="form" name="contact" method="POST" data-netlify="true">
                             <input type="hidden" name="form-name" value="contact" />
@@ -35,7 +34,6 @@ const Footer = () => {
                         </div>
                         <img src={jdk} className="jdk" alt="JD K" />
                     </div>
-                </div>
                 </div>
             </footer>
             <div className="footer">

@@ -72,6 +72,7 @@ const Projects = () => {
     
     return (
         <section className="section projects">
+            <div class="container">
                 <h1 className="title" data-text="My Projects">My Projects</h1>
                 <div className="projectcontainer">
                     {
@@ -94,6 +95,8 @@ const Projects = () => {
                         })
                     }
                 </div>
+            </div>
+                
         </section>
         
     )
