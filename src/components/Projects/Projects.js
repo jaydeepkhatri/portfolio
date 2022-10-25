@@ -72,7 +72,7 @@ const Projects = () => {
     
     return (
         <section className="section projects">
-            <div class="container">
+            <div className="container">
                 <h1 className="title" data-text="My Projects">My Projects</h1>
                 <div className="projectcontainer">
                     {

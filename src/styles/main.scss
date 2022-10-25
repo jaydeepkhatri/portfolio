@@ -1,3 +1,4 @@
+/* SCSS Variables */
 $black: #000;
 $white: #fff;
 $theme: #13d6c1;
@@ -19,6 +20,7 @@ body {
     color: $white;
 }
 
+/* Mixins */
 @mixin padding($value) {
     padding: $value*8px;    
 }
@@ -38,6 +40,7 @@ body {
     height: 100vh;
 }
 
+/* Common Elements*/
 .section {
     padding: 80px;
     min-height: 100vh;
@@ -85,6 +88,7 @@ body {
         margin-right: 0.5em;
     }
 }
+
 .title {
     position: relative;
     text-align: center;
@@ -115,13 +119,25 @@ body {
     }
 }
 
+/* Selection placeholder */
 ::selection {
     background: $white;
     color: $black;
 }
 
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 4px;
+}
+::-webkit-scrollbar-track {
+    background: #1c2024;
+}
+::-webkit-scrollbar-thumb {
+    background: $theme; 
+    border-radius: 0;
+}
 
-
+/* Add partial files */
 @import './partials/cursor';
 @import './partials/header';
 @import './partials/me';

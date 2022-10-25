@@ -1,3 +1,4 @@
+/* SCSS Variables */
 * {
   margin: 0;
   padding: 0;
@@ -17,6 +18,7 @@ body {
   color: #fff;
 }
 
+/* Mixins */
 .App {
   -ms-scroll-snap-type: y mandatory;
       scroll-snap-type: y mandatory;
@@ -24,6 +26,7 @@ body {
   height: 100vh;
 }
 
+/* Common Elements*/
 .section {
   padding: 80px;
   min-height: 100vh;
@@ -102,6 +105,7 @@ body {
     content: none;
   }
 }
+/* Selection placeholder */
 ::-moz-selection {
   background: #fff;
   color: #000;
@@ -111,6 +115,21 @@ body {
   color: #000;
 }
 
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1c2024;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #13d6c1;
+  border-radius: 0;
+}
+
+/* Add partial files */
 .cursor {
   width: 2.2rem;
   height: 2.2rem;
@@ -226,6 +245,7 @@ body {
 #view {
   padding: 120px 0;
   max-width: 100%;
+  background-attachment: fixed;
 }
 #view .container {
   margin: auto;
@@ -300,19 +320,19 @@ body {
   width: 100%;
 }
 .projects .projectcontainer .project {
-  padding: 12px;
+  padding: 8px;
   line-height: 1;
   color: #fff;
-  border: 1px solid #fff;
+  border: 2px solid rgba(19, 214, 193, 0.2);
   position: relative;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-  transition: 0.15s;
+  transition: 0.1s;
 }
 .projects .projectcontainer .project .img {
   width: 100%;
 }
 .projects .projectcontainer .project .projecttitlecontainer {
-  margin-top: 12px;
+  margin-top: 8px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -345,7 +365,7 @@ body {
   background: #13d6c1;
 }
 .projects .projectcontainer .project:hover {
-  box-shadow: 0 0 20px #13d6c1;
+  border: 2px solid #13d6c1;
 }
 
 .skills .language, .skills .tools {
@@ -514,6 +534,11 @@ body {
   color: #fff;
   letter-spacing: 2px;
   cursor: default;
+}
+@supports (scroll-snap-align: start) {
+  .footer {
+    scroll-snap-align: start;
+  }
 }
 .footer svg {
   vertical-align: middle;

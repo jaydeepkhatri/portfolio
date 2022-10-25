@@ -7,18 +7,18 @@
         max-width: 1400px;
         width: 100%;
         .project {
-            @include padding(1.5);
+            @include padding(1);
             line-height: 1;
             color: $white;
-            border: 1px solid $white;
+            border: 2px solid rgba($theme, 0.2);
             position: relative;
             box-shadow: 0 10px 20px rgba(0,0,0,0.15);
-            transition: 0.15s;
+            transition: 0.1s;
             .img {
                 width: 100%;
             }
             .projecttitlecontainer {
-                margin-top: 12px;
+                margin-top: 8px;
                 @include flexaligncenter;
                 justify-content: space-between;
                 .projecttitle {
@@ -53,7 +53,7 @@
                 }
             }
             &:hover {
-                box-shadow: 0 0 20px $theme;  
+                border: 2px solid $theme; 
             }
         }
     }

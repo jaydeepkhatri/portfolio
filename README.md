@@ -11,3 +11,7 @@
 <p align="left">
 <a href="https://twitter.com/jaydeepkhatri79" target="blank"><img src="https://img.shields.io/badge/Twitter-1DA1F2?logo=twitter&style=for-the-badge&logoColor=white" alt="jaydeepkhatri79" /></a> <a href="https://linkedin.com/in/jaydeep-khatri" target="blank"><img src="https://img.shields.io/badge/LinkedIn-0077B5?logo=linkedin&style=for-the-badge" alt="jaydeepkhatri79" /></a>
 </p>
+
+<hr/>
+
+Powered by !["Netlify"](https://img.shields.io/badge/Netlify-00C7B7?style=for-the-badge&logo=netlify&logoColor=white)

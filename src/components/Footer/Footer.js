@@ -6,7 +6,7 @@ import jdk from '../../assets/img/jdk.svg';
 const Footer = () => {
     return (
         <>
-            <footer className="section contact">
+            <footer className="section contact" id="contact">
                 <div className="contactgrid container">
                     <div className="formarea">
                         <form className="form" name="contact" method="POST" data-netlify="true">

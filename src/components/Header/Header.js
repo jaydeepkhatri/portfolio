@@ -16,6 +16,7 @@ const Header = () => {
             link: "https://www.linkedin.com/in/jaydeep-khatri/"
         }
     ];
+    
     return (
         <header className="header section">
             <h1 data-aos="fade-up">Jaydeep Khatri</h1>
