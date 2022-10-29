@@ -15,7 +15,7 @@ const Projects = () => {
             title: "FindBank",
             desc: "",
             url: "https://findbankreact.herokuapp.com/",
-            github: "",
+            github: "https://github.com/jaydeepkhatri/Find-Bank",
             tags: ["React", "Axios"]
         },
         {
@@ -77,10 +77,10 @@ const Projects = () => {
                 <div className="projectcontainer">
                     {
                         projectdata.map((project, i) => {
-                            return <a href={project.url} target="_blank" rel="noreferrer" className="project" key={i}>
+                            return <div className="project" key={i}>
                                 <img src={project.img} className="img" alt={project.alt} />
                                 <div className="projecttitlecontainer">
-                                    <h3 className="projecttitle"><a href={project.url} target="_blank" rel="noreferrer" title={`Visit ${project.title} site`}>{project.title}</a></h3>
+                                    <h2 className="projecttitle"><a href={project.url} target="_blank" rel="noreferrer" title={`Visit ${project.title} site`}>{project.title}</a></h2>
                                     <a href={project.github} title={`Source code for ${project.title}`}><FaGithub /></a>
                                 </div>
                                 <p className="description">{project.desc}</p>
@@ -91,7 +91,7 @@ const Projects = () => {
                                         })
                                     }
                                 </div>
-                            </a>
+                            </div>
                         })
                     }
                 </div>

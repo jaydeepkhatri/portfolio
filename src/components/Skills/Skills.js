@@ -73,12 +73,12 @@ const Skills = () => {
                                     {tool.name} <tool.icon />
                                 </div>
                         })}
-                        <ul className="sec seo">
+                        <div className="sec seo">
                         SEO <AiOutlineAreaChart />
                             <ul className="libs">
                                     <li className="lib">Schema</li>
                             </ul>
-                        </ul>
+                        </div>
                     </div>
                 </div>
             </div>

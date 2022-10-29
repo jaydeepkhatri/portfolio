@@ -14,7 +14,6 @@ html {
 body {
     font-family: 'Inter', sans-serif;
     overflow: hidden;
-    max-width: 1920px;
     margin: 0 auto;
     background: linear-gradient(to right, #191c1f, #151b25, #191c1f);
     color: $white;
@@ -47,20 +46,23 @@ body {
     @supports (scroll-snap-align: start) {
         scroll-snap-align: start;
     }
-    scroll-snap-stop: normal;
+    @supports (scroll-snap-stop: always) {
+        scroll-snap-stop: always;
+    }
     display: flex;
     flex-direction: column;
     justify-content: center;
     .container {
         max-width: 1400px;
         margin: 0 auto;
+        width: 100%;
     }
-    &:nth-child(odd) {
-        background: $black;
+    &:nth-child(even) {
+        background: rgb(20,20,20);
     }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 992px) {
     .App {
         scroll-snap-type: none;
     }
@@ -81,7 +83,7 @@ body {
     text-decoration: none;
     transition: 0.1s;
     &:hover {
-        background: #13c0af;
+        background: $white;
     }
     svg {
         vertical-align: middle;
@@ -119,6 +121,37 @@ body {
     }
 }
 
+/* Dots */
+.dots {
+    position: absolute;
+    top: 50%;
+    right: 4%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    .dot {
+        background: rgba($white, 0.3);
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: 0.1s all ease-in-out;
+        &:hover {
+            transform: scale(2);
+            background: $theme;
+        }
+    }
+    .active {
+        background: $theme;
+    }
+}
+@media screen and (max-width: 992px) {
+    .dots {
+        display: none;
+    }
+}
+
 /* Selection placeholder */
 ::selection {
     background: $white;
@@ -127,14 +160,8 @@ body {
 
 /* Scrollbar */
 ::-webkit-scrollbar {
-    width: 4px;
-}
-::-webkit-scrollbar-track {
-    background: #1c2024;
-}
-::-webkit-scrollbar-thumb {
-    background: $theme; 
-    border-radius: 0;
+    width: 0;
+    display: none;
 }
 
 /* Add partial files */
