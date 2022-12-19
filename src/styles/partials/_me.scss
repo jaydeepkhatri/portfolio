@@ -16,6 +16,23 @@
                 height: 250px;
                 border-radius: 50%;
             }
+            &::after {
+                content: '';
+                position: absolute;
+                inset: 0;
+                width: 230px;
+                height: 230px;
+                border: 10px solid $theme;
+                border-radius: 50%;
+                z-index: -2;
+                transition: 0.15s;
+            }
+            &:hover::after {
+                z-index: 2;
+                inset: -10px;
+                width: 250px;
+                height: 250px;
+            }
         }
         .desc {
             padding: 20px;

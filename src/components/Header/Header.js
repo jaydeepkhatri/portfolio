@@ -28,7 +28,7 @@ const Header = () => {
     return (
         <header className="header section" data-view="1">
             <h1 data-aos="fade-up">Jaydeep Khatri</h1>
-            <p className="subtitle">Frontend Developer</p>
+            <p className="subtitle">Frontend Engineer</p>
             <ul className="social">
                 {social.map((soc, i) => {
                     return <li className="sociallink" key={i} data-aos="fade-up" data-aos-delay={50 * (i + 1)}><a href={soc.link} aria-label={soc.name} target="_blank" rel="noopener noreferrer"><soc.icon /></a></li>

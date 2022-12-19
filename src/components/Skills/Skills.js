@@ -25,17 +25,17 @@ const Skills = () => {
     return (
         <section className="section skills">
             <div className="container">
-                <h1 className="title" data-text="Skills">Skills</h1>
+                <h1 className="title" data-text="Skills" data-aos="fade-up">Skills</h1>
                 <div className="language">
                     <h2><span className="title">Languages</span></h2>
                     <div className="group">
-                        <div className="sec html">HTML5
+                        <div className="sec html" data-aos="fade-up">HTML5
                             <SiHtml5 />
                             <ul className="libs">
                                 <li className="lib">Markdown</li>
                             </ul>
                         </div>
-                        <div className="sec css">CSS3
+                        <div className="sec css" data-aos="fade-up">CSS3
                             <SiCss3 />
                             <ul className="libs">
                                 <li className="lib">Bootstrap</li>
@@ -46,7 +46,7 @@ const Skills = () => {
                                     </ul>
                                 </li>
                             </ul></div>
-                        <div className="sec js">JavaScript
+                        <div className="sec js" data-aos="fade-up">JavaScript
                             <SiJavascript />
                             <ul className="libs">
                                 <li className="lib">DOM</li>
@@ -55,10 +55,10 @@ const Skills = () => {
                                 <li className="lib">Socket.io</li>
                             </ul>
                         </div>
-                        <div className="sec sql">React.js
+                        <div className="sec sql" data-aos="fade-up">React.js
                             <FaReact />
                         </div>
-                        <div className="sec php">NodeJs
+                        <div className="sec php" data-aos="fade-up">NodeJs
                             <FaNodeJs />
                         </div>
                         
@@ -69,11 +69,11 @@ const Skills = () => {
                     <h2><span className="title">Tools & Services</span></h2>
                     <div className="group">
                         {tools.map((tool, i) => {
-                            return <div className={tool.name + " sec"} key={i}>
+                            return <div className={tool.name + " sec"} key={i} data-aos="fade-up">
                                     {tool.name} <tool.icon />
                                 </div>
                         })}
-                        <div className="sec seo">
+                        <div className="sec seo" data-aos="fade-up">
                         SEO <AiOutlineAreaChart />
                             <ul className="libs">
                                     <li className="lib">Schema</li>
