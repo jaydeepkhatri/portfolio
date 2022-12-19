@@ -37,8 +37,8 @@
         .desc {
             padding: 20px;
             p {
-                @include fontsize(2.2);
-                color: $white;
+                @include fontsize(2);
+                color: #EEE;
                 line-height: 1.5;
                 opacity: 0.9;
                 letter-spacing: 0.5px;
@@ -62,6 +62,24 @@
         .btn {
             margin-top: 40px;
         }
+    }
+    .container.codearchitects {
+        margin-top: 200px;
+        grid-template-columns: 2fr 1fr;
+        .pic {
+            img {
+                border-radius: 0;
+                width: 350px;
+                height: auto;
+            }
+            &::after {
+                inset: -10px;
+                border-radius: 0;
+                width: 350px;
+                height: auto;
+            }
+        }
+        
     }
 }
 @media screen and (max-width: 992px) {

@@ -1,7 +1,7 @@
 import { SiHtml5, SiCss3, SiJavascript, SiFirebase, SiGoogleanalytics, SiAdobexd } from "react-icons/si";
 import { CgFigma } from "react-icons/cg";
 import { FaNodeJs, FaReact } from "react-icons/fa";
-import { AiOutlineAreaChart } from "react-icons/ai";
+import { AiOutlineAreaChart, AiFillGithub } from "react-icons/ai";
 
 const Skills = () => {
     const tools = [
@@ -73,6 +73,12 @@ const Skills = () => {
                                     {tool.name} <tool.icon />
                                 </div>
                         })}
+                        <div className="sec git" data-aos="fade-up">
+                            Git (Version Control)<AiFillGithub />
+                            <ul className="libs">
+                                <li className="lib">Github</li>
+                            </ul>
+                        </div>
                         <div className="sec seo" data-aos="fade-up">
                         SEO <AiOutlineAreaChart />
                             <ul className="libs">

@@ -258,8 +258,8 @@ body {
   padding: 20px;
 }
 #view .container .desc p {
-  font-size: 17.6px;
-  color: #fff;
+  font-size: 16px;
+  color: #EEE;
   line-height: 1.5;
   opacity: 0.9;
   letter-spacing: 0.5px;
@@ -281,6 +281,21 @@ body {
 }
 #view .container .btn {
   margin-top: 40px;
+}
+#view .container.codearchitects {
+  margin-top: 200px;
+  grid-template-columns: 2fr 1fr;
+}
+#view .container.codearchitects .pic img {
+  border-radius: 0;
+  width: 350px;
+  height: auto;
+}
+#view .container.codearchitects .pic::after {
+  inset: -10px;
+  border-radius: 0;
+  width: 350px;
+  height: auto;
 }
 
 @media screen and (max-width: 992px) {
