@@ -30,7 +30,10 @@ const Footer = () => {
                     <div className="details">
                         <div>
                             <h2>Email</h2>
-                            <a href="mailto:hello@jaydeepkhatri.me"><FiMail /> hello@jaydeepkhatri.me</a>
+                            <p>Find email from the Console Panel</p>
+                            {
+                                console.log("%c jaydeepkhatri79@gmail.com", "color: #F00; font-weight: 700; font-size: 2rem;")
+                            }
                         </div>
                         <img src={jdk} className="jdk" alt="JD K" />
                     </div>

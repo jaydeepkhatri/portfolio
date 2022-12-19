@@ -1,4 +1,4 @@
-import { FaGithub, FaLinkedin } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaCodepen } from 'react-icons/fa';
 import { BsTwitter} from 'react-icons/bs';
 
 const Header = () => {
@@ -17,6 +17,11 @@ const Header = () => {
             name: "LinkedIn",
             icon: FaLinkedin,
             link: "https://www.linkedin.com/in/jaydeep-khatri/"
+        },
+        {
+            name: "CodePen",
+            icon: FaCodepen,
+            link: "https://codepen.io/jaydeepkhatri"
         }
     ];
     

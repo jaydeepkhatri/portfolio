@@ -1,7 +1,13 @@
 /* SCSS Variables */
 $black: #000;
 $white: #fff;
-$theme: #13d6c1;
+// $theme: #13d6c1;
+// $theme: #F97F77;
+$theme: #EB455F;
+// $theme: #0AEB3E;
+// $theme: #23C8F6;
+// $theme: #AD99FF;
+// $theme: #FB9DA2;
 
 * {
     margin: 0;
@@ -13,7 +19,6 @@ html {
 }
 body {
     font-family: 'Inter', sans-serif;
-    overflow: hidden;
     margin: 0 auto;
     background: linear-gradient(to right, #191c1f, #151b25, #191c1f);
     color: $white;
@@ -33,22 +38,11 @@ body {
     align-items: center;
 }
 
-.App {
-    scroll-snap-type: y mandatory;
-    overflow-y: auto;
-    height: 100vh;
-}
 
 /* Common Elements*/
 .section {
     padding: 80px;
     min-height: 100vh;
-    @supports (scroll-snap-align: start) {
-        scroll-snap-align: start;
-    }
-    @supports (scroll-snap-stop: always) {
-        scroll-snap-stop: always;
-    }
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -63,9 +57,6 @@ body {
 }
 
 @media screen and (max-width: 992px) {
-    .App {
-        scroll-snap-type: none;
-    }
     .section {
         padding: 20px;
     }
@@ -118,37 +109,6 @@ body {
 @media screen and (max-width: 1200px) {
     .title::after {
         content: none;
-    }
-}
-
-/* Dots */
-.dots {
-    position: absolute;
-    top: 50%;
-    right: 4%;
-    transform: translateY(-50%);
-    display: flex;
-    flex-direction: column;
-    gap: 1em;
-    .dot {
-        background: rgba($white, 0.3);
-        width: 12px;
-        height: 12px;
-        border-radius: 50%;
-        cursor: pointer;
-        transition: 0.1s all ease-in-out;
-        &:hover {
-            transform: scale(2);
-            background: $theme;
-        }
-    }
-    .active {
-        background: $theme;
-    }
-}
-@media screen and (max-width: 992px) {
-    .dots {
-        display: none;
     }
 }
 

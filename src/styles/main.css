@@ -11,20 +11,12 @@ html {
 
 body {
   font-family: "Inter", sans-serif;
-  overflow: hidden;
   margin: 0 auto;
   background: linear-gradient(to right, #191c1f, #151b25, #191c1f);
   color: #fff;
 }
 
 /* Mixins */
-.App {
-  -ms-scroll-snap-type: y mandatory;
-      scroll-snap-type: y mandatory;
-  overflow-y: auto;
-  height: 100vh;
-}
-
 /* Common Elements*/
 .section {
   padding: 80px;
@@ -32,16 +24,6 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-}
-@supports (scroll-snap-align: start) {
-  .section {
-    scroll-snap-align: start;
-  }
-}
-@supports (scroll-snap-stop: always) {
-  .section {
-    scroll-snap-stop: always;
-  }
 }
 .section .container {
   max-width: 1400px;
@@ -53,10 +35,6 @@ body {
 }
 
 @media screen and (max-width: 992px) {
-  .App {
-    -ms-scroll-snap-type: none;
-        scroll-snap-type: none;
-  }
   .section {
     padding: 20px;
   }
@@ -65,7 +43,7 @@ body {
   display: inline-block;
   font-size: 0.9em;
   padding: 12px 32px;
-  background: #13d6c1;
+  background: #EB455F;
   text-transform: uppercase;
   font-weight: 700;
   color: rgba(0, 0, 0, 0.9);
@@ -101,43 +79,12 @@ body {
   transition: 0.1s;
 }
 .title:hover::after {
-  color: #13d6c1;
+  color: #EB455F;
 }
 
 @media screen and (max-width: 1200px) {
   .title::after {
     content: none;
-  }
-}
-/* Dots */
-.dots {
-  position: absolute;
-  top: 50%;
-  right: 4%;
-  transform: translateY(-50%);
-  display: flex;
-  flex-direction: column;
-  gap: 1em;
-}
-.dots .dot {
-  background: rgba(255, 255, 255, 0.3);
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  cursor: pointer;
-  transition: 0.1s all ease-in-out;
-}
-.dots .dot:hover {
-  transform: scale(2);
-  background: #13d6c1;
-}
-.dots .active {
-  background: #13d6c1;
-}
-
-@media screen and (max-width: 992px) {
-  .dots {
-    display: none;
   }
 }
 /* Selection placeholder */
@@ -161,7 +108,7 @@ body {
   width: 1.5rem;
   height: 1.5rem;
   z-index: 9;
-  border: 2px solid #13d6c1;
+  border: 2px solid #EB455F;
   border-radius: 50%;
   position: absolute;
   transform: translate(-50%, -50%);
@@ -178,7 +125,7 @@ body {
   transform: translate(-50%, -50%);
   width: 1px;
   height: 1px;
-  border: 2px solid #13d6c1;
+  border: 2px solid #EB455F;
   border-radius: 50%;
 }
 
@@ -196,7 +143,7 @@ body {
 .header h1 {
   font-size: 64px;
   padding: 16px 0;
-  color: #13d6c1;
+  color: #EB455F;
   transition: 125ms;
   display: inline-block;
 }
@@ -218,7 +165,7 @@ body {
 }
 .header .social .sociallink a {
   text-decoration: none;
-  color: #13d6c1;
+  color: #EB455F;
   font-size: 1.5em;
   transition: 0.1s;
 }
@@ -306,13 +253,13 @@ body {
   position: absolute;
   top: -20px;
   left: -20px;
-  color: #13d6c1;
+  color: #EB455F;
   font-size: 64px;
   opacity: 0.4;
   line-height: 1;
 }
 #view .container .desc p span {
-  color: #13d6c1;
+  color: #EB455F;
   font-weight: 700;
 }
 #view .container .btn {
@@ -348,7 +295,7 @@ body {
   padding: 8px;
   line-height: 1;
   color: #fff;
-  border: 2px solid rgba(19, 214, 193, 0.2);
+  border: 2px solid rgba(235, 69, 95, 0.2);
   position: relative;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
   transition: 0.1s;
@@ -387,10 +334,10 @@ body {
   text-transform: uppercase;
   border-radius: 4px;
   color: #000;
-  background: #13d6c1;
+  background: #EB455F;
 }
 .projects .projectcontainer .project:hover {
-  border: 2px solid #13d6c1;
+  border: 2px solid #EB455F;
 }
 
 .skills .language, .skills .tools {
@@ -417,14 +364,14 @@ body {
   transition: 0.1s;
 }
 .skills .language .group .sec:hover, .skills .tools .group .sec:hover {
-  border: 1px solid #13d6c1;
+  border: 1px solid #EB455F;
   background: #1f252e;
 }
 .skills .language .group .sec:hover svg, .skills .language .group .sec:hover img, .skills .tools .group .sec:hover svg, .skills .tools .group .sec:hover img {
   right: 30px;
   opacity: 1;
-  fill: #13d6c1;
-  stroke: #13d6c1;
+  fill: #EB455F;
+  stroke: #EB455F;
   transform: scale(2) translate(0, -90%);
 }
 .skills .language .group .sec:hover .libs .lib, .skills .tools .group .sec:hover .libs .lib {
@@ -511,12 +458,12 @@ body {
   outline: none;
   margin-top: 2px;
   color: #fff;
-  caret-color: #13d6c1;
+  caret-color: #EB455F;
   transition: 0.1s;
 }
 .contact .contactgrid .formarea .form .form-group .text:hover, .contact .contactgrid .formarea .form .form-group .text:focus, .contact .contactgrid .formarea .form .form-group .text:active {
-  border: 2px solid #13d6c1;
-  box-shadow: 0 0 5px #13d6c1;
+  border: 2px solid #EB455F;
+  box-shadow: 0 0 5px #EB455F;
 }
 .contact .contactgrid .formarea .form .form-group .message {
   padding: 8px 12px;
@@ -525,12 +472,12 @@ body {
   border: 2px solid rgb(66, 66, 66);
   color: #fff;
   resize: none;
-  caret-color: #13d6c1;
+  caret-color: #EB455F;
   transition: 0.1s;
 }
 .contact .contactgrid .formarea .form .form-group .message:hover, .contact .contactgrid .formarea .form .form-group .message:focus, .contact .contactgrid .formarea .form .form-group .message:active {
-  box-shadow: 0 0 5px #13d6c1;
-  border: 2px solid #13d6c1;
+  box-shadow: 0 0 5px #EB455F;
+  border: 2px solid #EB455F;
 }
 .contact .contactgrid .details {
   display: flex;
@@ -545,7 +492,7 @@ body {
   display: block;
 }
 .contact .contactgrid .details a svg {
-  color: #13d6c1;
+  color: #EB455F;
 }
 .contact .contactgrid .details .jdk {
   margin-top: 40px;
@@ -555,7 +502,7 @@ body {
 .footer {
   padding: 20px 0;
   text-align: center;
-  background: #13d6c1;
+  background: #EB455F;
   color: #000;
   letter-spacing: 2px;
   cursor: default;
@@ -599,7 +546,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #13d6c1;
+  background: #EB455F;
   color: #000;
   border: 2px solid #000;
   z-index: 5;
@@ -607,6 +554,6 @@ body {
 }
 .scrolldown:hover {
   background: #000;
-  color: #13d6c1;
+  color: #EB455F;
   border: 2px solid #fff;
 }/*# sourceMappingURL=main.css.map */
