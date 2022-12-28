@@ -105,8 +105,8 @@ body {
 
 /* Add partial files */
 .cursor {
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 40px;
+  height: 40px;
   z-index: 9;
   border: 2px solid #FFDD33;
   border-radius: 50%;
@@ -115,25 +115,9 @@ body {
   pointer-events: none;
   background: transparent;
   opacity: 1;
-  transition: 50ms ease-in-out;
-}
-.cursor::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 1px;
-  height: 1px;
-  border: 2px solid #FFDD33;
-  border-radius: 50%;
+  transition: 0.15s cubic-bezier(0.39, 0.575, 0.565, 1);
 }
 
-@media screen and (max-width: 600px) {
-  .cursor {
-    display: none;
-  }
-}
 .header {
   display: flex;
   align-items: center;
@@ -149,6 +133,7 @@ body {
 }
 .header .subtitle {
   font-size: 1.2em;
+  color: rgb(204, 204, 204);
 }
 .header .text {
   color: rgb(204, 204, 204);
@@ -313,6 +298,11 @@ body {
   #view .container .desc {
     padding: 12px 24px;
     text-align: justify;
+  }
+  #view .container.codearchitects {
+    grid-template-columns: 1fr;
+    grid-gap: 12px;
+    margin-top: 100px;
   }
 }
 .projects {

@@ -1,6 +1,6 @@
 .cursor {
-	width: 1.5rem;
-	height: 1.5rem;
+	width: 40px;
+	height: 40px;
 	z-index: 9;
 	border: 2px solid $theme;
 	border-radius: 50%;
@@ -9,21 +9,10 @@
 	pointer-events: none;
 	background: transparent;
 	opacity: 1;
-	transition: 50ms ease-in-out;
-	&::after {
-		content: '';
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-		width: 1px;
-		height: 1px;
-		border: 2px solid $theme;
-		border-radius: 50%;
-	}
+	transition: 0.15s cubic-bezier(.39,.575,.565,1);
 }
-@media screen and (max-width: 600px) {
-	.cursor {
-		display: none;
-	}
-}
+// @media screen and (max-width: 600px) {
+// 	.cursor {
+// 		display: none;
+// 	}
+// }
