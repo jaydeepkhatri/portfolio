@@ -1,16 +1,15 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 const Cursor = () => {
     const [showMouse, setShowMouse] = useState(true);
+    const mouseRef = useRef(null);
 
     useEffect(() => {
-        const mouseCursor = document.querySelector('.cursor');
         window.addEventListener('mousemove', (e) => {
-            mouseCursor.style.top = e.pageY + 'px';
-            mouseCursor.style.left = e.pageX + 'px';
+            mouseRef.current.style.top = e.pageY + 'px';
+            mouseRef.current.style.left = e.pageX + 'px';
         });
 
         window.addEventListener('resize', () => {
-            console.log(window.innerWidth);
             if(window.innerWidth <= 768) {
                 setShowMouse(false);
             } else {
@@ -21,7 +20,7 @@ const Cursor = () => {
 
     return (
         <>
-            {showMouse ? <div className="cursor" ></div> : null}
+            {showMouse ? <div className="cursor" ref={mouseRef}></div> : null}
         </>
     )
 }
