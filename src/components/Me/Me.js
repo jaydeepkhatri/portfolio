@@ -29,7 +29,7 @@ const Me = () => {
                 <div className="desc">
                     <h2 className="title" data-text="About" data-aos="fade-up">Code Architects</h2>
                     <p>Code Architects Instagram page - Created and managed a successful Instagram page with over 70K+ Followers and 12 Million+ views, offering tutorials and resources for aspiring web developers. Contributed to the creation and management of high-quality content as part of a team of experienced professionals.</p>
-                    <a href="https://instagram.com/code.architects" className="btn" target="_blank">View Account</a>
+                    <a href="https://instagram.com/code.architects" className="btn" target="_blank" rel="noreferrer">View Account</a>
                 </div>
                 <div className="pic">
                     <img src={igimage} alt="Code Architects | Instagram" />

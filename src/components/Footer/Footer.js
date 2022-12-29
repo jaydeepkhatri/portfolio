@@ -1,4 +1,3 @@
-import { FiMail } from "react-icons/fi";
 import { FaCoffee } from "react-icons/fa";
 import { AiFillHeart } from "react-icons/ai";
 import jdk from '../../assets/img/jdk.svg';
