@@ -15,7 +15,7 @@ const Me = () => {
         <section className="section" id="view"  style={{backgroundImage: `url(${aboutimg})`}}>
             <div className="container">
                 <div className="pic">
-                    <img src={profile} alt="Jaydeep Khatri | Profile" />
+                    <img src={profile} alt="Jaydeep Khatri | Profile" data-aos="fade-up" />
                 </div>
                 <div className="desc">
                     <h2 className="title" data-text="About" data-aos="fade-up">About</h2>
@@ -32,7 +32,7 @@ const Me = () => {
                     <a href="https://instagram.com/code.architects" className="btn" target="_blank" rel="noreferrer">View Account</a>
                 </div>
                 <div className="pic">
-                    <img src={igimage} alt="Code Architects | Instagram" />
+                    <img src={igimage} alt="Code Architects | Instagram"  data-aos="fade-up" />
                 </div>
             </div>
         </section>

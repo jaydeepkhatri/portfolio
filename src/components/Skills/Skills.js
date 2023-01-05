@@ -1,4 +1,4 @@
-import { SiHtml5, SiCss3, SiJavascript, SiFirebase, SiGoogleanalytics, SiAdobexd } from "react-icons/si";
+import { SiHtml5, SiCss3, SiJavascript, SiFirebase, SiGoogleanalytics, SiAdobexd, SiExpress, SiTypescript } from "react-icons/si";
 import { CgFigma } from "react-icons/cg";
 import { FaNodeJs, FaReact } from "react-icons/fa";
 import { AiOutlineAreaChart, AiFillGithub } from "react-icons/ai";
@@ -55,17 +55,23 @@ const Skills = () => {
                                 <li className="lib">Socket.io</li>
                             </ul>
                         </div>
-                        <div className="sec sql" data-aos="fade-up">React.js
+                        <div className="sec ts" data-aos="fade-up">
+                            TypeScript <SiTypescript />
+                        </div>
+
+                        <div className="sec react" data-aos="fade-up">React.js
                             <FaReact />
                         </div>
-                        <div className="sec php" data-aos="fade-up">NodeJs
+                        <div className="sec node" data-aos="fade-up">Node.js
                             <FaNodeJs />
                         </div>
-                        
+                        <div className="sec express" data-aos="fade-up">Express.js
+                            <SiExpress />
+                        </div>
 
                     </div>
                 </div>
-                <div className="tools">
+                <div className="tools" style={{marginTop: "24px"}}>
                     <h2><span className="title">Tools & Services</span></h2>
                     <div className="group">
                         {tools.map((tool, i) => {
