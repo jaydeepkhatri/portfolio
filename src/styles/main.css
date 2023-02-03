@@ -12,7 +12,7 @@ html {
 body {
   font-family: "Inter", sans-serif;
   margin: 0 auto;
-  background: linear-gradient(to right, #1b1f22, #283138, #1b1f22);
+  background: linear-gradient(to right, #1b1f22, #1d2327, #1b1f22);
   color: #fff;
 }
 
@@ -317,7 +317,7 @@ body {
   padding: 8px;
   line-height: 1;
   color: #fff;
-  border: 2px solid rgba(255, 221, 51, 0.2);
+  border: 2px solid rgba(255, 221, 51, 0.1);
   position: relative;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
   transition: 0.1s;
@@ -326,37 +326,43 @@ body {
   width: 100%;
 }
 .projects .projectcontainer .project .projecttitlecontainer {
-  margin-top: 8px;
+  margin-top: 12px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.projects .projectcontainer .project .projecttitlecontainer .projecttitle a {
+.projects .projectcontainer .project .projecttitlecontainer .projecttitle {
   color: #fff;
-  font-weight: 400;
   text-decoration: none;
+  font-size: 24px;
+  font-weight: 700;
 }
-.projects .projectcontainer .project .projecttitlecontainer .projecttitle + a {
-  font-size: 20px;
+.projects .projectcontainer .project .projecttitlecontainer svg {
   color: #fff;
-}
-.projects .projectcontainer .project .projecttitlecontainer .projecttitle + a svg {
   vertical-align: middle;
   margin-right: 8px;
+  width: 20px;
+  height: 20px;
+}
+.projects .projectcontainer .project .description {
+  margin-top: 12px;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  color: rgba(255, 255, 255, 0.6);
+  line-height: 1.5;
 }
 .projects .projectcontainer .project .tags {
   margin-top: 12px;
 }
 .projects .projectcontainer .project .tags .tag {
-  padding: 8px 12px;
+  padding: 6px 12px;
   display: inline-block;
-  margin: 4px;
+  margin-right: 4px;
   font-size: 12px;
-  font-weight: 900;
-  text-transform: uppercase;
+  font-weight: 700;
   border-radius: 4px;
   color: #000;
-  background: #FFDD33;
+  background: rgba(255, 221, 51, 0.75);
 }
 .projects .projectcontainer .project:hover {
   border: 2px solid #FFDD33;

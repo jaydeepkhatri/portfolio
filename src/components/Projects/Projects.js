@@ -1,69 +1,92 @@
-import {FaGithub} from "react-icons/fa";
-import findbank from "../../assets/img/findbank.png"
+import { FaGithub } from "react-icons/fa";
+import { AiOutlineLink } from "react-icons/ai";
 import vartalap from "../../assets/img/vartalap.png";
 import minifier from "../../assets/img/minifier.png";
 import pixel from "../../assets/img/pixelart.png"
 import mynotes from "../../assets/img/mynotes.png";
-import themovies from "../../assets/img/themovies.png"
+import themovies from "../../assets/img/themovies.png";
+import weather from "../../assets/img/weather.jpg";
+import collatz from "../../assets/img/collatz.png";
+import webper from "../../assets/img/webper.png";
 
 const Projects = () => {
     const projectdata = [
         {
-            id: "1",
-            img: findbank,
-            alt: "FindBank",
-            title: "FindBank",
-            desc: "",
-            url: "https://findbankreact.herokuapp.com/",
-            github: "https://github.com/jaydeepkhatri/Find-Bank",
-            tags: ["React", "Axios"]
+            id: 1,
+            img: weather,
+            alt: "Weather PWA",
+            title: "Weather",
+            desc: "PWA for weather built with TypeScript & Tailwind.",
+            url: "https://alpines.netlify.app/",
+            github: "https://github.com/jaydeepkhatri/weather",
+            tags: ["TypeScript", "Tailwind"]
         },
         {
-            id: "2",
+            id: 2,
+            img: webper,
+            alt: "Platform to test API's",
+            title: "Webper",
+            desc: "Platform to test API's",
+            url: "https://webper.netlify.app/",
+            github: "https://github.com/jaydeepkhatri/Webper",
+            tags: ["React, Axios"]
+        },
+        {
+            id: 3,
+            img: collatz,
+            alt: "Visualize the Collatz Conjecture",
+            title: "Collatz.",
+            desc: "Web App to visualize Collatz Conjecture",
+            url: "https://3nplus1.netlify.app/",
+            github: "https://github.com/jaydeepkhatri/collatz-conjecture",
+            tags: ["React"]
+        },
+        {
+            id: 4,
             img: themovies,
             alt: "TheMovies",
             title: "TheMovies",
-            desc: "",
-            url: "https://themoviesdb.herokuapp.com/",
+            desc: "Get the list of latest trending Movies",
+            url: "https://themovies1.netlify.app/",
             github: "https://github.com/jaydeepkhatri/TheMovies",
             tags: ["React"]
         },
         {
-            id: "3",
+            id: 5,
             img: pixel,
             alt: "Pixel Art",
             title: "Pixel Art",
-            desc: "",
-            url: "https://create-pixel-art.herokuapp.com/",
+            desc: "Create Custom Pixel Art",
+            url: "https://pixel-draw.netlify.app",
             github: "https://github.com/jaydeepkhatri/pixel-art",
             tags: ["React", "Canvas"]
         },
         {
-            id: "4",
+            id: 6,
             img: mynotes,
             alt: "MyNotes",
             title: "MyNotes",
-            desc: "",
-            url: "https://mynotes-react.herokuapp.com/",
+            desc: "Notes app built with MUI",
+            url: "https://note-notes.netlify.app/",
             github: "https://github.com/jaydeepkhatri/MyNotes",
-            tags: ["React", "Material UI"]
+            tags: ["React", "MUI"]
         },
         {
-            id: "5",
+            id: 7,
             img: vartalap,
             alt: "Vartalap",
             title: "Vartalap",
-            desc: "",
+            desc: "Anonymous Chat App built with Socket IO",
             url: "https://vartalap-chat.herokuapp.com/",
             github: "https://github.com/jaydeepkhatri/Vartalap",
             tags: ["JS", "Express", "Socket"]
         },
         {
-            id: "6",
+            id: 8,
             img: minifier,
             alt: "Minifier",
             title: "Minifier",
-            desc: "",
+            desc: "Instantly Minify your CSS file",
             url: "https://jaydeepkhatri.github.io/Minifier/",
             github: "https://github.com/jaydeepkhatri/Minifier",
             tags: ["JS"]
@@ -80,8 +103,11 @@ const Projects = () => {
                             return <div className="project" key={i}>
                                 <img src={project.img} className="img" alt={project.alt} />
                                 <div className="projecttitlecontainer">
-                                    <h2 className="projecttitle"><a href={project.url} target="_blank" rel="noreferrer" title={`Visit ${project.title} site`}>{project.title}</a></h2>
-                                    <a href={project.github} title={`Source code for ${project.title}`}><FaGithub /></a>
+                                    <a href={project.url} className="projecttitle" target="_blank" rel="noreferrer" title={`Visit ${project.title} site`}>{project.title}</a>
+                                    <div>
+                                        <a href={project.github} target="_blank" rel="noreferrer" title={`Source code for ${project.title}`}><FaGithub /></a>
+                                        <a href={project.url} target="_blank" rel="noreferrer" title={`Preview for ${project.title}`}><AiOutlineLink /></a>
+                                    </div>
                                 </div>
                                 <p className="description">{project.desc}</p>
                                 <div className="tags">
@@ -95,6 +121,7 @@ const Projects = () => {
                         })
                     }
                 </div>
+                <p>Find more on my <a href="https://github.com/jaydeepkhatri">Github</a></p>
             </div>
                 
         </section>

@@ -1,16 +1,17 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import { FaChevronUp } from "react-icons/fa";
 
 const ScrollDown = () => {
+    const scrollRef = useRef(null);
+
     useEffect(() => {
-        const btn = document.querySelector(".scrolldown");
         document.onscroll = () => {
             if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-                btn.style.opacity = "1";
-                btn.style.pointerEvents = "all";
+                scrollRef.current.style.opacity = "1";
+                scrollRef.current.style.pointerEvents = "all";
             } else {
-                btn.style.opacity = 0;
-                btn.style.pointerEvents = "none";
+                scrollRef.current.style.opacity = 0;
+                scrollRef.current.style.pointerEvents = "none";
             }
         }
     }, []);
@@ -21,7 +22,7 @@ const ScrollDown = () => {
     }
 
     return(
-        <div className="scrolldown" onClick={() => handleClick()}><FaChevronUp /></div>
+        <div className="scrolldown" ref={scrollRef} onClick={() => handleClick()}><FaChevronUp /></div>
     )
 }
 

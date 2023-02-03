@@ -8,7 +8,7 @@
             @include padding(1);
             line-height: 1;
             color: $white;
-            border: 2px solid rgba($theme, 0.2);
+            border: 2px solid rgba($theme, 0.1);
             position: relative;
             box-shadow: 0 10px 20px rgba(0,0,0,0.15);
             transition: 0.1s;
@@ -16,38 +16,41 @@
                 width: 100%;
             }
             .projecttitlecontainer {
-                margin-top: 8px;
+                margin-top: 12px;
                 @include flexaligncenter;
                 justify-content: space-between;
                 .projecttitle {
-                    a {
                         color: $white;
-                        font-weight: 400;
                         text-decoration: none;
-                    }
+                        @include fontsize(3);
+                        font-weight: 700;
                 }
-                .projecttitle+a {
-                    @include fontsize(2.5);
-                    color: $white;
                     svg {
+                        color: $white;
                         vertical-align: middle;
                         margin-right: 8px;
+                        width: 20px;
+                        height: 20px;
                     }
-                }
             }
-            
+            .description {
+                margin-top: 12px;
+                @include fontsize(2);
+                letter-spacing: 0.5px;
+                color: rgba($white, 0.6);
+                line-height: 1.5;
+            }
             .tags {
                 margin-top:12px;
                 .tag {
-                    padding: 8px 12px;
+                    padding: 6px 12px;
                     display: inline-block;
-                    margin: 4px;
+                    margin-right: 4px;
                     @include fontsize(1.5);
-                    font-weight: 900;
-                    text-transform: uppercase;
+                    font-weight: 700;
                     border-radius: 4px;
                     color: $black;
-                    background: $theme;
+                    background: rgba($theme, 0.75);
                 }
             }
             &:hover {
