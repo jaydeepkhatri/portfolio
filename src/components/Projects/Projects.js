@@ -121,7 +121,7 @@ const Projects = () => {
                         })
                     }
                 </div>
-                <p>Find more on my <a href="https://github.com/jaydeepkhatri">Github</a></p>
+                <p class="findmore">Find more on my <a href="https://github.com/jaydeepkhatri">Github</a></p>
             </div>
                 
         </section>

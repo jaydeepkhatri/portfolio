@@ -35,7 +35,7 @@
             }
             .description {
                 margin-top: 12px;
-                @include fontsize(2);
+                @include fontsize(1.9);
                 letter-spacing: 0.5px;
                 color: rgba($white, 0.6);
                 line-height: 1.5;
@@ -56,6 +56,14 @@
             &:hover {
                 border: 2px solid $theme; 
             }
+        }
+    }
+    .findmore {
+        margin: 20px auto;
+        text-align: center;
+        @include fontsize(2.5);
+        a {
+            color: $white;
         }
     }
 }
