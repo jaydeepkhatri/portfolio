@@ -77,7 +77,7 @@ const Projects = () => {
             alt: "Vartalap",
             title: "Vartalap",
             desc: "Anonymous Chat App built with Socket IO",
-            url: "https://vartalap-chat.herokuapp.com/",
+            url: "",
             github: "https://github.com/jaydeepkhatri/Vartalap",
             tags: ["JS", "Express", "Socket"]
         },
@@ -105,8 +105,12 @@ const Projects = () => {
                                 <div className="projecttitlecontainer">
                                     <a href={project.url} className="projecttitle" target="_blank" rel="noreferrer" title={`Visit ${project.title} site`}>{project.title}</a>
                                     <div>
-                                        <a href={project.github} target="_blank" rel="noreferrer" title={`Source code for ${project.title}`}><FaGithub /></a>
-                                        <a href={project.url} target="_blank" rel="noreferrer" title={`Preview for ${project.title}`}><AiOutlineLink /></a>
+                                        {
+                                            project.github.length === 0 ? null : <a href={project.github} target="_blank" rel="noreferrer" title={`Source code for ${project.title}`}><FaGithub /></a>
+                                        }
+                                        {
+                                            project.url.length === 0 ? null : <a href={project.url} target="_blank" rel="noreferrer" title={`Preview for ${project.title}`}><AiOutlineLink /></a>
+                                        }
                                     </div>
                                 </div>
                                 <p className="description">{project.desc}</p>

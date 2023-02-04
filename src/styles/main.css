@@ -348,7 +348,7 @@ body {
   margin-top: 12px;
   font-size: 15.2px;
   letter-spacing: 0.5px;
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(255, 255, 255, 0.8);
   line-height: 1.5;
 }
 .projects .projectcontainer .project .tags {
@@ -362,7 +362,7 @@ body {
   font-weight: 700;
   border-radius: 4px;
   color: #000;
-  background: rgba(255, 221, 51, 0.75);
+  background: #ffdd33;
 }
 .projects .projectcontainer .project:hover {
   border: 2px solid #FFDD33;

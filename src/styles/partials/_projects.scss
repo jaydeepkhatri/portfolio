@@ -37,7 +37,7 @@
                 margin-top: 12px;
                 @include fontsize(1.9);
                 letter-spacing: 0.5px;
-                color: rgba($white, 0.6);
+                color: rgba($white, 0.8);
                 line-height: 1.5;
             }
             .tags {
@@ -50,7 +50,7 @@
                     font-weight: 700;
                     border-radius: 4px;
                     color: $black;
-                    background: rgba($theme, 0.75);
+                    background: rgba($theme, 1);
                 }
             }
             &:hover {
