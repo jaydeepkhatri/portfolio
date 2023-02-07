@@ -14,6 +14,7 @@ body {
   margin: 0 auto;
   background: linear-gradient(to right, #1b1f22, #1d2327, #1b1f22);
   color: #fff;
+  overflow-x: hidden;
 }
 
 /* Mixins */
@@ -99,8 +100,22 @@ body {
 
 /* Scrollbar */
 ::-webkit-scrollbar {
-  width: 0;
-  display: none;
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgb(40, 40, 40);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #fff;
+  border-radius: 10px;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ffdd33;
 }
 
 /* Add partial files */
