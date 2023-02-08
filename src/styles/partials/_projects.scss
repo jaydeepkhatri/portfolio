@@ -49,8 +49,8 @@
                     @include fontsize(1.5);
                     font-weight: 700;
                     border-radius: 4px;
-                    color: $black;
-                    background: rgba($theme, 1);
+                    color: $white;
+                    border: 1px solid $theme;
                 }
             }
             &:hover {

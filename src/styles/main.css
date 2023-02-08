@@ -376,8 +376,8 @@ body {
   font-size: 12px;
   font-weight: 700;
   border-radius: 4px;
-  color: #000;
-  background: #ffdd33;
+  color: #fff;
+  border: 1px solid #FFDD33;
 }
 .projects .projectcontainer .project:hover {
   border: 2px solid #FFDD33;
