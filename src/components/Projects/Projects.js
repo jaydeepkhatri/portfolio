@@ -8,6 +8,7 @@ import themovies from "../../assets/img/themovies.png";
 import weather from "../../assets/img/weather.jpg";
 import collatz from "../../assets/img/collatz.png";
 import webper from "../../assets/img/webper.png";
+import './Projects.scss';
 
 const Projects = () => {
     const projectdata = [

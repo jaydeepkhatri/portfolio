@@ -1,0 +1,12 @@
+@mixin padding($value) {
+    padding: $value*8px;
+}
+
+@mixin fontsize($value) {
+    font-size: $value*8px;
+}
+
+@mixin flexaligncenter {
+    display: flex;
+    align-items: center;
+}

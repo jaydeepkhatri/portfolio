@@ -1,4 +1,6 @@
 import { useEffect, useState, useRef } from "react";
+import "./Cursor.scss";
+
 const Cursor = () => {
     const [showMouse, setShowMouse] = useState(true);
     const mouseRef = useRef(null);

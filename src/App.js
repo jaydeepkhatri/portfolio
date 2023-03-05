@@ -1,4 +1,4 @@
-import "./styles/main.css";
+import "./styles/main.scss";
 import { Cursor, Header, Me, Projects, Skills, Footer, ScrollDown } from "./components";
 import AOS from 'aos';
 import 'aos/dist/aos.css';

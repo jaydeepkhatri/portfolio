@@ -1,5 +1,6 @@
 import { useEffect, useRef } from "react";
 import { FaChevronUp } from "react-icons/fa";
+import './ScrollDown.scss';
 
 const ScrollDown = () => {
     const scrollRef = useRef(null);

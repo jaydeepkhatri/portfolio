@@ -1,7 +1,5 @@
-/* SCSS Variables */
-$black: #000;
-$white: #fff;
-$theme: #FFDD33;
+@import '../vendors/variables';
+@import '../vendors/mixins';
 
 * {
     margin: 0;
@@ -20,21 +18,6 @@ body {
     color: $white;
     overflow-x: hidden;
 }
-
-/* Mixins */
-@mixin padding($value) {
-    padding: $value*8px;
-}
-
-@mixin fontsize($value) {
-    font-size: $value*8px;
-}
-
-@mixin flexaligncenter {
-    display: flex;
-    align-items: center;
-}
-
 
 /* Common Elements*/
 .section {
@@ -140,12 +123,3 @@ body {
 ::-webkit-scrollbar-thumb:hover {
     background: rgba($theme, 1);
 }
-
-/* Add partial files */
-@import './partials/cursor';
-@import './partials/header';
-@import './partials/me';
-@import './partials/projects';
-@import './partials/skills';
-@import './partials/footer';
-@import './partials/scrolldown';

@@ -1,5 +1,6 @@
 import { FaGithub, FaLinkedin, FaCodepen } from 'react-icons/fa';
 import { BsTwitter} from 'react-icons/bs';
+import './Header.scss';
 
 const Header = () => {
     const social = [

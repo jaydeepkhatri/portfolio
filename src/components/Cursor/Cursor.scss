@@ -1,3 +1,5 @@
+@import '../../vendors/variables';
+
 .cursor {
 	width: 40px;
 	height: 40px;
@@ -9,10 +11,5 @@
 	pointer-events: none;
 	background: transparent;
 	opacity: 1;
-	transition: 0.15s cubic-bezier(.39,.575,.565,1);
+	// transition: 0.15s cubic-bezier(.39,.575,.565,1);
 }
-// @media screen and (max-width: 600px) {
-// 	.cursor {
-// 		display: none;
-// 	}
-// }

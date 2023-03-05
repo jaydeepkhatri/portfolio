@@ -2,6 +2,7 @@ import profile from '../../assets/img/new_profile.jpg';
 import igimage from '../../assets/img/instagram_preview.jpg';
 import { AiFillContacts } from 'react-icons/ai';
 import aboutimg from "../../assets/img/about_bg.png";
+import "./Me.scss";
 
 const redirecttoContact = () => {
     const el = document.querySelector("#contact");
