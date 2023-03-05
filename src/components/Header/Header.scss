@@ -1,74 +1,99 @@
 @import '../../vendors/variables';
-@import '../../vendors/mixins'; 
+@import '../../vendors/mixins';
 
 .header {
-    @include flexaligncenter;
-    justify-content: center;
-    flex-direction: column;
-    h1 {
-        @include fontsize(8);
-        text-transform: uppercase;
-        padding: 16px 0;
-        color: $theme;
-        transition: 125ms;
-        display: inline-block;
-    }
-    .subtitle {
-        font-size: 1.2em;
-        color:rgb(120 109 109);
-    }
-    .social {
-        margin-top: 20px;
-        list-style: none;
-        .sociallink {
-            display: inline-block;
-            margin: 0 8px;
-            a {
-                text-decoration: none;
-                color: $theme;
-                font-size: 1.5em;
-                transition: 0.1s;
-                svg {
-                    vertical-align: middle;
-                }
-                &:hover {
-                    color: $white;
-                }
-            }
+  @include flexaligncenter;
+  justify-content: center;
+  flex-direction: column;
+  background: $white;
+
+  .wave {
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    object-fit: cover;
+    max-height: 250px;
+    object-position: bottom;
+  }
+
+  h1 {
+    @include fontsize(6);
+    text-transform: uppercase;
+    color: $black;
+    transition: 125ms;
+    display: inline-block;
+  }
+
+  .subtitle {
+    margin-top: 8px;
+    font-size: 1.2em;
+    color: rgb(120 109 109);
+  }
+
+  .social {
+    margin-top: 8px;
+    list-style: none;
+
+    .sociallink {
+      display: inline-block;
+      margin: 0 8px;
+
+      a {
+        text-decoration: none;
+        color: $black;
+        font-size: 1.5em;
+        transition: 0.1s;
+
+        svg {
+          vertical-align: middle;
         }
+
+        &:hover {
+          color: $black;
+        }
+      }
     }
+  }
 }
 
 @media screen and (max-width: 1000px) {
-    .header {
-        padding-left:  0;
-        text-align: center;
-        .social {
-            margin: 0;
-        }
+  .header {
+    padding-left: 0;
+    text-align: center;
+
+    .social {
+      margin: 0;
     }
+  }
 
 }
+
 @media screen and (max-width: 800px) {
-    .header {
-        grid-template-columns: 1fr;
-        h1 {
-            @include fontsize(10);
-        }
-        .subtitle {
-            @include padding(1);
-        }
+  .header {
+    grid-template-columns: 1fr;
+
+    h1 {
+      @include fontsize(10);
     }
+
+    .subtitle {
+      @include padding(1);
+    }
+  }
 }
+
 @media screen and (max-width: 600px) {
-    .header {
-        padding: 20px;
-        h1 {
-            @include fontsize(6);
-            @include padding(0);
-        }
-        .subtitle {
-            @include fontsize(2);
-        }
-    }   
+  .header {
+    padding: 20px;
+
+    h1 {
+      @include fontsize(6);
+      @include padding(0);
+    }
+
+    .subtitle {
+      @include fontsize(2);
+    }
+  }
 }

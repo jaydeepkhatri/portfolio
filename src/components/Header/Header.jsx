@@ -1,5 +1,6 @@
 import { FaGithub, FaLinkedin, FaCodepen } from 'react-icons/fa';
 import { BsTwitter } from 'react-icons/bs';
+import wave from '../../assets/img/wave.svg';
 import './Header.scss';
 
 function Header() {
@@ -41,6 +42,7 @@ function Header() {
           })
         }
       </ul>
+      <img src={wave} className="wave" alt="" />
     </header>
   );
 }

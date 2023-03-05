@@ -7,8 +7,8 @@ function Cursor() {
 
   useEffect(() => {
     window.addEventListener('mousemove', (e) => {
-      mouseRef.current.style.top = `${e.pageY}'px'`;
-      mouseRef.current.style.left = `${e.pageX}'px'`;
+      mouseRef.current.style.top = `${e.pageY}px`;
+      mouseRef.current.style.left = `${e.pageX}px`;
     });
 
     window.addEventListener('resize', () => {

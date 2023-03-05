@@ -1,102 +1,103 @@
 @import '../../vendors/variables';
 
 .skills {
-	.language,
-	.tools {
-		margin-top: 20px;
 
-		h2 {
-			font-weight: 400;
-		}
+  .language,
+  .tools {
+    margin-top: 20px;
 
-		.group {
-			margin-top: 20px;
-			display: grid;
-			grid-gap: 25px;
-			grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-			width: 100%;
-			max-width: 1400px;
+    h2 {
+      font-weight: 400;
+    }
 
-			.sec {
-				font-size: 1.2em;
-				padding: 20px;
-				box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-				border: 1px solid $white;
-				overflow: hidden;
-				position: relative;
-				transition: 0.1s;
+    .group {
+      margin-top: 20px;
+      display: grid;
+      grid-gap: 25px;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      width: 100%;
+      max-width: 1400px;
 
-				&:hover {
-					border: 1px solid $theme;
-					background: #1f252e;
+      .sec {
+        font-size: 1.2em;
+        padding: 20px;
+        border: 1px solid $white;
+        overflow: hidden;
+        position: relative;
+        transition: 0.250s;
 
-					svg,
-					img {
-						right: 30px;
-						opacity: 1;
-						fill: $theme;
-						stroke: $theme;
-						transform: scale(2) translate(0, -90%);
-					}
+        &:hover {
+          border: 1px solid $theme;
+          box-shadow: 0 0 200px 200px $theme inset;
+          color: $white;
 
-					.libs .lib {
-						color: rgb(220, 220, 220);
-					}
-				}
+          svg,
+          img {
+            right: 30px;
+            opacity: 1;
+            fill: $white;
+            stroke: $white;
+            transform: scale(2) translate(0, -90%);
+          }
 
-				svg {
-					position: absolute;
-					z-index: 0;
-					width: 30px;
-					top: 100px;
-					right: -4px;
-					fill: #000;
-					opacity: 0;
-					transform: translate(0, -50%);
-					transform-origin: center;
-					font-size: 2em;
-					transition: 0.1s;
+          .libs .lib {
+            color: rgb(220, 220, 220);
+          }
+        }
 
-				}
+        svg {
+          position: absolute;
+          z-index: 0;
+          width: 30px;
+          top: 100px;
+          right: -4px;
+          fill: #000;
+          opacity: 0;
+          transform: translate(0, -50%);
+          transform-origin: center;
+          font-size: 2em;
+          transition: 0.1s;
 
-				.libs {
-					list-style: none;
+        }
 
-					.lib {
-						color: #888;
-						padding: 2px 14px;
-						font-size: 0.9em;
-						position: relative;
-						transition: 0.1s;
+        .libs {
+          list-style: none;
 
-						&::before {
-							content: '';
-							position: absolute;
-							width: 8px;
-							height: 1px;
-							top: 12px;
-							left: 2px;
-							background: rgb(192, 192, 192);
-						}
+          .lib {
+            color: #888;
+            padding: 2px 14px;
+            font-size: 0.9em;
+            position: relative;
+            transition: 0.1s;
 
-						&::after {
-							content: '';
-							position: absolute;
-							width: 1px;
-							height: 16px;
-							top: -4px;
-							left: 2px;
-							background: rgb(192, 192, 192);
-						}
-					}
-				}
-			}
-		}
-	}
+            &::before {
+              content: '';
+              position: absolute;
+              width: 8px;
+              height: 1px;
+              top: 12px;
+              left: 2px;
+              background: rgb(192, 192, 192);
+            }
+
+            &::after {
+              content: '';
+              position: absolute;
+              width: 1px;
+              height: 16px;
+              top: -4px;
+              left: 2px;
+              background: rgb(192, 192, 192);
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 @media screen and (max-width: 800px) {
-	.skills {
-		padding: 40px 20px;
-	}
+  .skills {
+    padding: 40px 20px;
+  }
 }

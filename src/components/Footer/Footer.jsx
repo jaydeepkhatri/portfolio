@@ -4,13 +4,13 @@ import './Footer.scss';
 
 function Footer() {
   return (
-    <div className="footer">
+    <footer className="footer">
       Made with
       <AiFillHeart />
       &amp;
       <FaCoffee />
       by JD.
-    </div>
+    </footer>
   );
 }
 

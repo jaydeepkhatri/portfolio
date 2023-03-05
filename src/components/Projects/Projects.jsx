@@ -17,7 +17,7 @@ function Projects() {
       img: weather,
       alt: 'Weather PWA',
       title: 'Weather',
-      desc: 'PWA for weather built with TypeScript & Tailwind.',
+      desc: 'PWA built with TypeScript & Tailwind.',
       url: 'https://alpines.netlify.app/',
       github: 'https://github.com/jaydeepkhatri/weather',
       tags: ['TypeScript', 'Tailwind']
@@ -27,7 +27,7 @@ function Projects() {
       img: webper,
       alt: 'Platform to test API"s',
       title: 'Webper',
-      desc: 'Platform to test API"',
+      desc: 'Make GET & POST requests easily.',
       url: 'https://webper.netlify.app/',
       github: 'https://github.com/jaydeepkhatri/Webper',
       tags: ['React', 'Axios']
@@ -37,7 +37,7 @@ function Projects() {
       img: collatz,
       alt: 'Visualize the Collatz Conjecture',
       title: 'Collatz.',
-      desc: 'Web App to visualize Collatz Conjecture',
+      desc: 'Web App to visualize 3n + 1',
       url: 'https://3nplus1.netlify.app/',
       github: 'https://github.com/jaydeepkhatri/collatz-conjecture',
       tags: ['React']
@@ -77,7 +77,7 @@ function Projects() {
       img: vartalap,
       alt: 'Vartalap',
       title: 'Vartalap',
-      desc: 'Anonymous Chat App built with Socket IO',
+      desc: 'Anonymous Chat built with Socket',
       url: '',
       github: 'https://github.com/jaydeepkhatri/Vartalap',
       tags: ['JS', 'Express', 'Socket']
@@ -87,7 +87,7 @@ function Projects() {
       img: minifier,
       alt: 'Minifier',
       title: 'Minifier',
-      desc: 'Instantly Minify your CSS file',
+      desc: 'Instantly Minify your CSS code',
       url: 'https://jaydeepkhatri.github.io/Minifier/',
       github: 'https://github.com/jaydeepkhatri/Minifier',
       tags: ['JS']

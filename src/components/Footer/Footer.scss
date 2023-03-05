@@ -1,16 +1,14 @@
 @import '../../vendors/variables';
 
 .footer {
-    padding: 20px 0;
-    text-align: center;
-    background: $theme;
-    color: $black;
-    letter-spacing: 2px;
-    cursor: default;
-    @supports (scroll-snap-align: start) {
-        scroll-snap-align: start;
-    }
-    svg {
-        vertical-align: middle;
-    }
+  padding: 20px 0;
+  text-align: center;
+  background: $theme;
+  color: $white;
+  letter-spacing: 2px;
+  cursor: default;
+
+  svg {
+    vertical-align: middle;
+  }
 }

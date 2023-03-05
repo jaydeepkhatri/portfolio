@@ -7,7 +7,7 @@ function ScrollDown() {
 
   useEffect(() => {
     document.onscroll = () => {
-      if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+      if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 150) {
         scrollRef.current.style.opacity = '1';
         scrollRef.current.style.pointerEvents = 'all';
       } else {

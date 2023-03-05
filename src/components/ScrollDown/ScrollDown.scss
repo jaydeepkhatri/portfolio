@@ -2,25 +2,26 @@
 @import '../../vendors/variables';
 
 .scrolldown {
-	opacity: 0;
-	pointer-events: none;
-	position: fixed;
-	right: 20px;
-	bottom: 20px;
-	width: 48px;
-	height: 48px;
-	border-radius: 50%;
-	cursor: pointer;
-	@include flexaligncenter;
-	justify-content: center;
-	background: $theme;
-	color: $black;
-	border: 2px solid $black;
-	z-index:5;
-	transition: 0.2s;
-	&:hover {
-		background: $black;
-		color: $theme;
-		border: 2px solid $white;
-	}
+  opacity: 0;
+  pointer-events: none;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  cursor: pointer;
+  @include flexaligncenter;
+  justify-content: center;
+  background: $theme;
+  color: $white;
+  border: 2px solid $white;
+  z-index: 5;
+  transition: 0.2s;
+
+  &:hover {
+    background: $black;
+    color: $white;
+    border: 2px solid $white;
+  }
 }
