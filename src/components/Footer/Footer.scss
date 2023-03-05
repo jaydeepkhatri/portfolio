@@ -1,83 +1,5 @@
 @import '../../vendors/variables';
 
-.contact {
-    color: $white;
-    .contactgrid {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-gap: 40px;
-        z-index: 2;
-        width: 100%;
-        .formarea {
-            .form {
-                border-radius: 20px;
-                .formtitle {
-                    margin-bottom: 40px;
-                }
-                .form-group {
-                    display: flex;
-                    justify-content: center;
-                    flex-direction: column;
-                    margin-bottom: 20px;
-                    label {
-                        color: #555;
-                        font-size: 14px;
-                    }
-                    .text {
-                        font-family: Inter, sans-serif;
-                        padding: 8px 12px;
-                        background: rgb(66, 66, 66);
-                        border: 2px solid transparent;
-                        outline: none;
-                        margin-top: 2px;
-                        color: $white;
-                        caret-color: $theme;
-                        transition: 0.1s;
-                        &:hover, &:focus, &:active {
-                            border: 2px solid $theme;
-                            box-shadow: 0 0 5px $theme;
-                        }
-
-                    }
-                    .message {
-                        padding: 8px 12px;
-                        outline: none;
-                        background: rgb(66, 66, 66);
-                        border: 2px solid rgb(66, 66, 66);
-                        color: $white;
-                        resize: none;
-                        caret-color: $theme;
-                        transition: 0.1s;
-                        &:hover, &:focus, &:active {
-                            box-shadow: 0 0 5px $theme;
-                            border: 2px solid $theme;
-                        }
-                    }
-                }
-            }
-        }
-        .details {
-            display: flex;
-            flex-direction: column;
-            h2 {
-                margin-bottom: 20px;
-            }
-            a {
-                text-decoration: none;
-                color: $white;
-                display: block;
-                
-                svg {
-                    color: $theme;
-                }
-            }
-            .jdk {
-                margin-top: 40px;
-                width: 120px;
-            }
-        }
-    }
-}
 .footer {
     padding: 20px 0;
     text-align: center;
@@ -90,28 +12,5 @@
     }
     svg {
         vertical-align: middle;
-    }
-}
-
-@media screen and (max-width: 1000px) {
-    .contact .contactgrid {
-        grid-template-columns: 1fr;
-    }
-} 
-
-@media screen and (max-width: 600px) {
-    .contact {
-        .contactgrid {
-            width: 100%;
-            .formarea {
-                .form {
-                    box-shadow: none;
-                    border-radius: 0;
-                }
-            }
-            .details .jdk {
-                display: none;
-            }
-        }
     }
 }
