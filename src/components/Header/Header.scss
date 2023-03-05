@@ -15,12 +15,7 @@
     }
     .subtitle {
         font-size: 1.2em;
-        color:rgb(204, 204, 204);
-    }
-    .text {
-        color:rgb(204, 204, 204);
-        @include fontsize(2.5);
-        margin-bottom: 40px;
+        color:rgb(120 109 109);
     }
     .social {
         margin-top: 20px;
@@ -63,9 +58,6 @@
         .subtitle {
             @include padding(1);
         }
-        .headerimg {
-            display: none;
-        }
     }
 }
 @media screen and (max-width: 600px) {
@@ -79,8 +71,4 @@
             @include fontsize(2);
         }
     }   
-}
-
-@media screen and (max-height: 450px) {
-    .header .bottomarrow { display: none; }
 }

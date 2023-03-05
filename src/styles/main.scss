@@ -14,7 +14,8 @@ html {
 body {
     font-family: 'Inter', sans-serif;
     margin: 0 auto;
-    background: linear-gradient(to right, #1b1f22, #1d2327, #1b1f22);
+    background: $white;
+    //background: linear-gradient(to right, #1b1f22, #1d2327, #1b1f22);
     color: $black;
     overflow-x: hidden;
 }
