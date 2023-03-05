@@ -2,13 +2,15 @@
 @import '../../vendors/mixins';
 
 .header {
-  @include flexaligncenter;
-  justify-content: center;
-  flex-direction: column;
   background: $white;
+
+  .header-animate {
+    text-align: center;
+  }
 
   .wave {
     position: absolute;
+    z-index: 2;
     bottom: -1px;
     left: 0;
     width: 100%;
@@ -18,10 +20,9 @@
   }
 
   h1 {
-    @include fontsize(6);
+    @include fontsize(10);
     text-transform: uppercase;
     color: $black;
-    transition: 125ms;
     display: inline-block;
   }
 
@@ -43,7 +44,6 @@
         text-decoration: none;
         color: $black;
         font-size: 1.5em;
-        transition: 0.1s;
 
         svg {
           vertical-align: middle;
@@ -77,7 +77,7 @@
       @include fontsize(10);
     }
 
-    .subtitle {
+    .subtitle, .social {
       @include padding(1);
     }
   }
@@ -88,7 +88,7 @@
     padding: 20px;
 
     h1 {
-      @include fontsize(6);
+      @include fontsize(4);
       @include padding(0);
     }
 

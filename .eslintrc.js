@@ -23,6 +23,7 @@ module.exports = {
     'arrow-body-style': 'off',
     indent: ['error', 2],
     'comma-dangle': ['error', 'never'],
-    'react/self-closing-comp': 'off'
+    'react/self-closing-comp': 'off',
+    'import/no-extraneous-dependencie': 'off'
   }
 };

@@ -52,13 +52,14 @@ body {
   background: $theme;
   text-transform: uppercase;
   font-weight: 700;
-  color: rgba($black, 0.9);
+  color: rgba($white, 0.9);
   cursor: pointer;
   text-decoration: none;
   transition: 0.1s;
 
   &:hover {
     background: $white;
+    color: $black;
   }
 
   svg {
