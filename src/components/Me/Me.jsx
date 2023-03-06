@@ -1,21 +1,14 @@
 import { useEffect, useRef } from 'react';
-import { AiFillContacts } from 'react-icons/ai';
 import { gsap, ScrollTrigger } from 'gsap/all';
 import profile from '../../assets/img/new_profile.jpg';
 import igimage from '../../assets/img/instagram_preview.jpg';
 import aboutimg from '../../assets/img/about_bg.png';
 import './Me.scss';
 
-const redirecttoContact = () => {
-  const el = document.querySelector('#contact');
-  el.scrollIntoView();
-};
-
 function Me() {
   const textRef = useRef(null);
   const codeArchRef = useRef(null);
   const imgRef1 = useRef(null);
-  // const imgRef2 = useRef(null);
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
@@ -77,10 +70,6 @@ function Me() {
             Jaydeep thinks he sounds even more amazing when he talks about himself in the
             third person. But who can blame him? <span>He&apos;s that good.</span>
           </p>
-          <button className="btn" type="button" onClick={() => redirecttoContact()}>
-            <AiFillContacts />
-            Contact Me
-          </button>
         </div>
       </div>
 

@@ -2,7 +2,7 @@ import { useEffect, useState, useRef } from 'react';
 import './Cursor.scss';
 
 function Cursor() {
-  const [showMouse, setShowMouse] = useState(true);
+  const [showMouse, setShowMouse] = useState(false);
   const mouseRef = useRef(null);
 
   useEffect(() => {
@@ -10,15 +10,15 @@ function Cursor() {
       mouseRef.current.style.top = `${e.pageY}px`;
       mouseRef.current.style.left = `${e.pageX}px`;
     });
+  }, [showMouse]);
 
-    window.addEventListener('resize', () => {
-      if (window.innerWidth <= 768) {
-        setShowMouse(false);
-      } else {
-        setShowMouse(true);
-      }
-    });
-  }, []);
+  window.addEventListener('resize', () => {
+    if (window.innerWidth <= 768) {
+      setShowMouse(false);
+    } else {
+      setShowMouse(true);
+    }
+  });
 
   return (
     showMouse ? <div className="cursor" ref={mouseRef}></div> : null
