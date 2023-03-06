@@ -123,7 +123,7 @@ function Projects() {
   return (
     <section className="section projects">
       <div className="container">
-        <h1 className="title" data-text="My Projects" data-aos="fade-up">My Projects</h1>
+        <h1 className="title" data-text="My Projects">My Projects</h1>
         <div className="projectcontainer" ref={projectRef}>
           {
             projectdata.map((project, i) => {

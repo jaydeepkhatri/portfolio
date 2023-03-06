@@ -28,18 +28,18 @@ function Skills() {
   return (
     <section className="section skills">
       <div className="container">
-        <h1 className="title" data-text="Skills & Tools" data-aos="fade-up">Skills & Tools</h1>
+        <h1 className="title" data-text="Skills & Tools">Skills & Tools</h1>
         <div className="language">
           <h2><span className="title">Languages</span></h2>
           <div className="group">
-            <div className="sec html" data-aos="fade-up">
+            <div className="sec html">
               HTML5
               <SiHtml5 />
               <ul className="libs">
                 <li className="lib">Markdown</li>
               </ul>
             </div>
-            <div className="sec css" data-aos="fade-up">
+            <div className="sec css">
               CSS3
               <SiCss3 />
               <ul className="libs">
@@ -54,7 +54,7 @@ function Skills() {
                 </li>
               </ul>
             </div>
-            <div className="sec js" data-aos="fade-up">
+            <div className="sec js">
               JavaScript
               <SiJavascript />
               <ul className="libs">
@@ -64,20 +64,20 @@ function Skills() {
                 <li className="lib">Socket.io</li>
               </ul>
             </div>
-            <div className="sec ts" data-aos="fade-up">
+            <div className="sec ts">
               TypeScript
               <SiTypescript />
             </div>
 
-            <div className="sec react" data-aos="fade-up">
+            <div className="sec react">
               React.js
               <FaReact />
             </div>
-            <div className="sec node" data-aos="fade-up">
+            <div className="sec node">
               Node.js
               <FaNodeJs />
             </div>
-            <div className="sec express" data-aos="fade-up">
+            <div className="sec express">
               Express.js
               <SiExpress />
             </div>
@@ -89,20 +89,20 @@ function Skills() {
           <div className="group">
             {tools.map((tool, i) => {
               return (
-                <div className={`${tool.name} sec`} key={i} data-aos="fade-up">
+                <div className={`${tool.name} sec`} key={i}>
                   {tool.name}
                   <tool.icon />
                 </div>
               );
             })}
-            <div className="sec git" data-aos="fade-up">
+            <div className="sec git">
               Git (Version Control)
               <AiFillGithub />
               <ul className="libs">
                 <li className="lib">Github</li>
               </ul>
             </div>
-            <div className="sec seo" data-aos="fade-up">
+            <div className="sec seo">
               SEO
               <AiOutlineAreaChart />
               <ul className="libs">

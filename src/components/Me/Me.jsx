@@ -56,10 +56,10 @@ function Me() {
     <section className="section" id="view" style={{ background: `url(${aboutimg}), linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0.1), rgba(0,0,0,0))` }}>
       <div className="container">
         <div className="pic">
-          <img src={profile} ref={imgRef1} alt="Jaydeep Khatri | Profile" data-aos="fade-up" />
+          <img src={profile} ref={imgRef1} alt="Jaydeep Khatri | Profile" />
         </div>
         <div className="desc">
-          <h2 className="title" data-text="About" data-aos="fade-up">About</h2>
+          <h2 className="title" data-text="About">About</h2>
           <p className="text" ref={textRef}>
             Meet <span>Jaydeep Khatri</span>, the superhero Frontend Developer hailing from
             Gujarat, India. With a deep understanding of web development technologies, he creates
@@ -87,7 +87,7 @@ function Me() {
       {/* Code Architects */}
       <div className="container codearchitects">
         <div className="desc">
-          <h2 className="title" data-text="About" data-aos="fade-up">Code Architects</h2>
+          <h2 className="title" data-text="About">Code Architects</h2>
           <p className="text" ref={codeArchRef}>
             <span>Code Architects</span> Instagram page - Created and managed a successful Instagram
             page with over <span>75K+ Followers</span> and <span>15 Million+ views</span>, offering
@@ -98,7 +98,7 @@ function Me() {
           <a href="https://instagram.com/code.architects" className="btn" target="_blank" rel="noreferrer">View Account</a>
         </div>
         <div className="pic">
-          <img src={igimage} alt="Code Architects | Instagram" data-aos="fade-up" />
+          <img src={igimage} alt="Code Architects | Instagram" />
         </div>
       </div>
     </section>
