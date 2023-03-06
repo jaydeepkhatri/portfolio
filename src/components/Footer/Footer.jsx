@@ -5,11 +5,7 @@ import './Footer.scss';
 function Footer() {
   return (
     <footer className="footer">
-      Made with
-      <AiFillHeart />
-      &amp;
-      <FaCoffee />
-      by JD.
+      Made with <AiFillHeart /> &amp; <FaCoffee /> by JD.
     </footer>
   );
 }

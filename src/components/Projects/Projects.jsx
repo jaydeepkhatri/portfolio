@@ -155,8 +155,7 @@ function Projects() {
           }
         </div>
         <p className="findmore">
-          Find more on my
-          <a href="https://github.com/jaydeepkhatri">Github</a>
+          Find more on my <a href="https://github.com/jaydeepkhatri">Github</a>
         </p>
       </div>
     </section>
