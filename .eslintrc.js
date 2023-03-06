@@ -26,6 +26,6 @@ module.exports = {
     'import/no-extraneous-dependencie': 'off',
     'react/jsx-one-expression-per-line': 'off',
     'react/jsx-closing-tag-location': 'off',
-    'linebreak-style': ['error', process.env.NODE_ENV === 'prod' ? 'unix' : 'windows']
+    'linebreak-style': 0
   }
 };
