@@ -102,8 +102,8 @@ function Projects() {
     const cards = gsap.utils.toArray(projectRef.current.children);
     cards.forEach((card, i) => {
       gsap.fromTo(card, {
-        x: `${-100 + (i * 25)}px`,
-        y: '-40px',
+        x: '-40px',
+        y: `${-100 + (i * 25)}px`,
         autoAlpha: 0
       }, {
         autoAlpha: 1,
