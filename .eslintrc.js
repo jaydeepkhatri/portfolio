@@ -17,7 +17,6 @@ module.exports = {
     'react'
   ],
   rules: {
-    'linebreak-style': ['error', 'windows'],
     'react/react-in-jsx-scope': 'off',
     'react/no-array-index-key': 'off',
     'arrow-body-style': 'off',
@@ -26,6 +25,7 @@ module.exports = {
     'react/self-closing-comp': 'off',
     'import/no-extraneous-dependencie': 'off',
     'react/jsx-one-expression-per-line': 'off',
-    'react/jsx-closing-tag-location': 'off'
+    'react/jsx-closing-tag-location': 'off',
+    'linebreak-style': ['error', process.env.NODE_ENV === 'prod' ? 'unix' : 'windows']
   }
 };
