@@ -1,5 +1,7 @@
+import { useEffect, useRef } from 'react';
 import { FaGithub } from 'react-icons/fa';
 import { AiOutlineLink } from 'react-icons/ai';
+import { gsap } from 'gsap/all';
 import vartalap from '../../assets/img/vartalap.png';
 import minifier from '../../assets/img/minifier.png';
 import pixel from '../../assets/img/pixelart.png';
@@ -94,11 +96,35 @@ function Projects() {
     }
   ];
 
+  const projectRef = useRef(null);
+
+  useEffect(() => {
+    const cards = gsap.utils.toArray(projectRef.current.children);
+    cards.forEach((card, i) => {
+      gsap.fromTo(card, {
+        x: `${-100 + (i * 25)}px`,
+        y: '-40px',
+        autoAlpha: 0
+      }, {
+        autoAlpha: 1,
+        x: '0px',
+        y: '0px',
+        delay: i * 0.1,
+        scrollTrigger: {
+          trigger: card,
+          scrub: true,
+          start: 'top 90%',
+          end: 'center 50%'
+        }
+      });
+    });
+  }, []);
+
   return (
     <section className="section projects">
       <div className="container">
         <h1 className="title" data-text="My Projects" data-aos="fade-up">My Projects</h1>
-        <div className="projectcontainer">
+        <div className="projectcontainer" ref={projectRef}>
           {
             projectdata.map((project, i) => {
               return (

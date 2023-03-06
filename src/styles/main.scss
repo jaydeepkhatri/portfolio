@@ -27,6 +27,8 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  position: relative;
+  z-index: 2;
 
   .container {
     max-width: 1400px;
@@ -106,6 +108,20 @@ body {
   background: $theme;
   color: $white;
 }
+
+.text span {
+  background: linear-gradient($theme, $theme);
+  padding: 2px 4px;
+  color: $white;
+  background-size: 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 0.5s ease-in;
+}
+
+.text span.active {
+  background-size: 100% 100%;
+}
+
 
 /* Scrollbar */
 // ::-webkit-scrollbar {

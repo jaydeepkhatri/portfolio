@@ -32,19 +32,28 @@ const social = [
 function Header() {
   const headerRef = useRef(null);
   const imageRef = useRef(null);
+  const textRef = useRef(null);
 
   gsap.registerPlugin(ScrollTrigger);
 
   useEffect(() => {
+    setTimeout(() => {
+      gsap.utils.toArray(textRef.current).forEach((el) => {
+        ScrollTrigger.create({
+          trigger: el,
+          start: 'top 80%',
+          toggleClass: 'active'
+        });
+      });
+    }, 1000);
+
     gsap.to(headerRef.current, {
-      duration: 0.3,
       autoAlpha: 1,
       ease: 'none',
-      scale: 3,
+      scale: 0.5,
       scrollTrigger: {
         trigger: imageRef.current,
-        markers: true,
-        start: '-150 45%',
+        start: '-200 50%',
         end: 'top',
         scrub: true
       }
@@ -54,7 +63,7 @@ function Header() {
   return (
     <header className="header section">
       <div ref={headerRef} className="header-animate">
-        <h1>Jaydeep Khatri</h1>
+        <h1 className="text" ref={textRef}>Jaydeep Khatri</h1>
         <p className="subtitle">Frontend Engineer</p>
         <ul className="social">
           {

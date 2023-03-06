@@ -24,6 +24,8 @@ module.exports = {
     indent: ['error', 2],
     'comma-dangle': ['error', 'never'],
     'react/self-closing-comp': 'off',
-    'import/no-extraneous-dependencie': 'off'
+    'import/no-extraneous-dependencie': 'off',
+    'react/jsx-one-expression-per-line': 'off',
+    'react/jsx-closing-tag-location': 'off'
   }
 };
