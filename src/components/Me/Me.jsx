@@ -92,8 +92,7 @@ function Me() {
             <span>Code Architects</span> Instagram page - Created and managed a successful Instagram
             page with over <span>75K+ Followers</span> and <span>15 Million+ views</span>, offering
             tutorials and resources for <span>aspiring web developers</span>. Contributed to the
-            creation and management of <span>high-quality</span> content as Leader of a team of
-            1 <span>experienced professional</span>.
+            creation and management of <span>high-quality</span> content and as Leader. 😎
           </p>
           <a href="https://instagram.com/code.architects" className="btn" target="_blank" rel="noreferrer">View Account</a>
         </div>
