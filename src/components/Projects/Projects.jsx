@@ -131,7 +131,7 @@ function Projects() {
                 <div className="project" key={i}>
                   <img src={project.img} className="img" alt={project.alt} />
                   <div className="projecttitlecontainer">
-                    <a href={project.url} className="projecttitle" target="_blank" rel="noreferrer" title={`Visit ${project.title} site`}>{project.title}</a>
+                    <span className="projecttitle" title={`Visit ${project.title} site`}>{project.title}</span>
                     <div>
                       {
                         project.github.length === 0 ? null : <a href={project.github} aria-label="Link to Github" target="_blank" rel="noreferrer" title={`Source code for ${project.title}`}><FaGithub /></a>
