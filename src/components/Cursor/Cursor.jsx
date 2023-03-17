@@ -6,17 +6,21 @@ function Cursor() {
   const mouseRef = useRef(null);
 
   useEffect(() => {
+    if (window.innerWidth >= 768) {
+      setShowMouse(true);
+    }
+
     window.addEventListener('mousemove', (e) => {
-      mouseRef.current.style.top = `${e.pageY}px`;
-      mouseRef.current.style.left = `${e.pageX}px`;
+      if (showMouse) {
+        mouseRef.current.style.top = `${e.pageY}px`;
+        mouseRef.current.style.left = `${e.pageX}px`;
+      }
     });
-  }, [showMouse]);
+  });
 
   window.addEventListener('resize', () => {
     if (window.innerWidth <= 768) {
       setShowMouse(false);
-    } else {
-      setShowMouse(true);
     }
   });
 
