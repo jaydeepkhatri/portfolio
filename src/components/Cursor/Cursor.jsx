@@ -18,12 +18,6 @@ function Cursor() {
     });
   });
 
-  window.addEventListener('resize', () => {
-    if (window.innerWidth <= 768) {
-      setShowMouse(false);
-    }
-  });
-
   return (
     showMouse ? <div className="cursor" ref={mouseRef}></div> : null
   );
